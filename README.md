@@ -1,3 +1,3 @@
-# git-practice
+# Practice git pull
 
 Hello world
