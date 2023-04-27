@@ -1,3 +1,3 @@
-# Practice git pull
+# Practice git pull | fetch
 
 Hello world
