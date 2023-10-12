@@ -86,3 +86,23 @@ a:visited {
     color: #703bfa;
 }
 */
+
+/* Slider container */
+.slider-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto; /* Set the desired height */
+    overflow: hidden;
+}
+
+/* Slider */
+.slider {
+    display: flex;
+    transition: transform 1.0s ease;
+}
+
+.slider img {
+    max-width: 100%;
+    max-height: 100%; /* Maintain the aspect ratio and fit within the container */
+}
