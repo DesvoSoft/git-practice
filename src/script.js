@@ -1,38 +1,66 @@
-const slider = document.querySelector(".slider");
-const images = slider.querySelectorAll("img");
-let count = 0;
-
-function adjustImageSize() {
-    const sliderHeight = slider.clientHeight;
-    images.forEach((img) => {
-        img.style.height = sliderHeight + "px";
+/* Creating an intersection observer */
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        console.log(entry)
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+        } else {
+            entry.target.classList.remove('show');
+        }
     });
+});
+
+/* Adding the observer to the elements */
+const hiddenElements = document.querySelectorAll('.hidden');
+hiddenElements.forEach((el) => observer.observe(el));
+
+
+var swiper = new Swiper(".mySwiper", {
+    effect: 'coverflow',
+    direction: 'horizontal',
+    centeredSlides: true,
+    slidesPerView: '2',
+
+    // Settings for coverflow effect
+    coverflowEffect: {
+        rotate: 15,
+        stretch: 0,
+        depth: 300,
+        modifier: 1,
+        slideShadows : true,
+        },  
+    
+
+    // Loop and autoplay
+    loop: true,
+    autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+        },
+        
+     /*Pagination
+    pagination: {
+    el: '.swiper-pagination',
+    },*/
+
+    // Navigation with keyboard and mouse
+    grabCursor: true,
+    keyboard: {
+        enabled: true,
+        onlyInViewport: false,
+      },
+});
+
+
+/* Creating a dropdown menu  */
+const toggleBtn = document.querySelector('.dropdown-btn');
+const toggleBtnIcon = document.querySelector('.dropdown-btn a');
+const dropdown = document.querySelector('.dropdown');
+
+/* Adding an event listener to the button */
+
+toggleBtn.addEventListener('click', function() {
+    dropdown.classList.toggle('open')
+    const isOpen = dropdown.classList.contains('open');
 }
-
-function nextSlide() {
-    count = (count + 1) % images.length;
-    updateSlider();
-}
-
-function prevSlide() {
-    count = (count - 1 + images.length) % images.length;
-    updateSlider();
-}
-
-function updateSlider() {
-    const translation = -count * 100;
-    slider.style.transform = `translateX(${translation}%)`;
-}
-
-function autoAdvance() {
-    nextSlide();
-}
-
-// Adjust image size initially and on window resize
-adjustImageSize();
-window.addEventListener("resize", adjustImageSize);
-
-setInterval(autoAdvance, 3000); // Auto-advance every 3 seconds
-
-document.querySelector(".next-button").addEventListener("click", nextSlide);
-document.querySelector(".prev-button").addEventListener("click", prevSlide);
+);

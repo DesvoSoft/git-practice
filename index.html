@@ -3,61 +3,134 @@
 <html>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./src/styles.css">
-    <script src="./src/script.js" defer></script>
-    <title>Welcome to my website</title>
+    <link rel="stylesheet" href="./src/style.css">
+    <script defer src="./src/script.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"></script>
+    <title>DesvoSoft</title>
 </html>
 <body>
     <header>
-        <h1>Hello world!</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#images"></a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="navbar">
+            <div class="logo"><a href="#">Hello world</a></div>
+            <nav>
+                <ul class="links">
+                    <li><a href="#home" class="navbutton">Home</a></li>
+                    <li><a href="#about" class="navbutton">About</a></li>
+                    <li><a href="#images" class="navbutton">Images</a></li>
+                    <li><a href="#contact" class="navbutton">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="dropdown-btn">
+                <a href="#">&#9776;</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <li><a href="#home" class="navbutton">Home</a></li>
+            <li><a href="#about" class="navbutton">About</a></li>
+            <li><a href="#images" class="navbutton">Images</a></li>
+            <li><a href="#contact" class="navbutton">Contact</a></li>
+        </div>
+
     </header>
 
-    <section id="home">
-        <h2>Homepage</h2>
+    <section id="home" class="hidden">
+        <h2>Homepage</h2><br>
         <p>Welcome to my simple website. This is the home section.</p>
         <br>
-        <p>This website is designed to practice versions control with git, SEO, and other topics. I will update it with content that I have generated with Stable Diffussion.</p>
+        <p>This website is designed to practice versions control with git, SEO, and other topics.
+        <br>It will be update with content that generated with Stable Diffussion. <br>
+        The objective is to practice and display some outcomes.
+        </p>
     </section>
 
-    <section id="about">
-        <h2>About</h2>
+    <section id="about" class="hidden">
+        <h2>About</h2><br>
         <p>Learning about everything.</p>
         <br>
-        <p>𝔈𝔩𝔡𝔢𝔩</p><br>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet mauris commodo quis imperdiet massa tincidunt nunc. Semper eget duis at tellus at urna. Integer feugiat scelerisque varius morbi enim nunc faucibus. Pellentesque nec nam aliquam sem et tortor. Tellus at urna condimentum mattis pellentesque id nibh. Ut diam quam nulla porttitor. Ullamcorper sit amet risus nullam eget felis eget nunc lobortis. Vulputate eu scelerisque felis imperdiet proin fermentum. Scelerisque viverra mauris in aliquam sem fringilla ut morbi tincidunt. Porttitor lacus luctus accumsan tortor posuere. Sagittis aliquam malesuada bibendum arcu vitae. Elementum sagittis vitae et leo duis. Accumsan lacus vel facilisis volutpat est velit egestas dui id. Odio euismod lacinia at quis risus sed vulputate. Ipsum nunc aliquet bibendum enim facilisis. Tellus in hac habitasse platea dictumst. Sed velit dignissim sodales ut.</p>
+        <br>
+        <p>𝔈𝔩𝔡𝔢𝔩</p><br>
     </section>
 
-    <section id="images">
+    <section id="images" class="hidden">
         <h2>Images</h2>
-        <p>The following images are outcomes of Stable Diffussion 1.5, which I really like.</p><br>
-        <div class="slider-container">
-            <div class="slider">
-                <img src="./src/images/1.png" alt="image of an anime girl">
-                <img src="./src/images/3.png" alt="image of an anime girl">
-                <img src="./src/images/5.png" alt="image of an anime girl">
-                <img src="./src/images/6.png" alt="image of an anime girl">
-                <img src="./src/images/7.png" alt="image of an anime girl">
-                <img src="./src/images/8.png" alt="image of an anime girl">
-                <img src="./src/images/9.png" alt="image of an anime girl">
-                <img src="./src/images/10.png" alt="image of an anime girl">
-                <img src="./src/images/11.png" alt="image of an anime girl">
-                <img src="./src/images/12.png" alt="image of an anime girl">
-                <img src="./src/images/13.png" alt="image of an anime girl">
+        <br>
+        <p>Images generated with Stable Diffussion 1.5</p>
+        <br><br><br>
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+                    <img src="./src/images/1.png">
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="./src/images/2.png">
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="./src/images/3.png">
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="./src/images/4.png">
+                </div>
+                    
+                <div class="swiper-slide">
+                    <img src="./src/images/5.png">
+                </div>
+                    
+                <div class="swiper-slide">
+                    <img src="./src/images/6.png">
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="./src/images/7.png">
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="./src/images/8.png">
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="./src/images/9.png">
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="./src/images/10.png">
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="./src/images/11.png">
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="./src/images/12.png">
+                </div>
+                    
+                <div class="swiper-slide">
+                    <img src="./src/images/13.png">
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="./src/images/14.png">
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="./src/images/15.png">
+                </div>
+                
             </div>
+            <div class="swiper-pagination"></div>
         </div>
     </section>
 
-    <section id="contact">
+    <section id="contact" class="hidden">
         <h2>Contact</h2>
-        <p>Contact me through the following means:</p>
+        <br>
+        <p>Contact me through the following means:</p><br>
         <li>Email: <a href="mailto:contact@example.com">desvox23@gmail.com</a></li>
         <li><a href="https://discord.gg/v5hyKDyfVT">Discord Server</a></li>
     </section><br>
