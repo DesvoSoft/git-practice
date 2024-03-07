@@ -5,7 +5,7 @@ Hello world!
 A project to practice git and learn about new frameworks.
 I will try to follow guidelines and good practices in this project, any advise will be really appreciate it.
 
-================== Updates ==================
+Updates
 
 - Oct. 10 2023:
   Feeling inspired to code. The site was started, nothing especial tho.
