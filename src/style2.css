@@ -1,4 +1,4 @@
-/* Reset some default styles to ensure consistent rendering across browsers */
+/* Reset y estilos base */
 body,
 h1,
 h2,
@@ -8,96 +8,155 @@ ul {
     padding: 0;
 }
 
-/* Set a background gradient and a futuristic font for the entire page */
 body {
     font-family: 'Roboto', sans-serif;
-    font-size: 20px;
+    font-size: 18px;
     background: linear-gradient(to bottom, #0d1c2e, #084d92);
     color: #e4e4e4;
-    padding: 0;
-    margin: 0;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
-/* Add a bit of spacing to the top and bottom of h1 and h2 headings */
+/* Encabezados */
 h1,
+h2,
+h3,
+h4,
+h5 {
+    margin: 20px 0 10px;
+    color: #e4e4e4;
+}
+
+h1 {
+    font-size: 2.5em;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+}
+
 h2 {
-    margin: 10px 0;
+    font-size: 2em;
+    background-color: #3498db;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
 }
 
-/* Style the header with a dark background, centered text, and a subtle border */
-header {
+h3 {
+    font-size: 1.75em;
+    border-left: 5px solid #3498db;
+    padding-left: 15px;
+}
+
+h4 {
+    font-size: 1.5em;
+    color: #3498db;
+    border-bottom: 2px dotted #3498db;
+    padding-bottom: 5px;
+}
+
+/* Código en línea */
+code {
+    background-color: #1e2a3a;
+    color: #e4e4e4;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: 'Fira Code', Consolas, monospace;
+    font-size: 0.9em;
+}
+
+/* Bloques de código */
+pre {
+    background-color: #1e2a3a;
+    color: #e4e4e4;
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 8px;
+    font-family: 'Fira Code', Consolas, monospace;
+    font-size: 0.95em;
+    line-height: 1.4;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    overflow-x: auto;
+    border-left: 4px solid #3498db;
+    clear: both;
+    /* Asegura que el pre no se superponga con elementos flotantes */
     position: relative;
-    padding: 0 2rem;
+    /* Establece un nuevo contexto de apilamiento */
+    z-index: 1;
+    /* Asegura que el pre esté por encima del contenido normal */
 }
 
-/* Style the footer with a dark background and cyan text */
-footer {
-    background-color: #0b1825;
-    color: #00b8d4;
-    text-align: center;
-    padding: 2rem;
+pre code {
+    background-color: transparent;
+    padding: 0;
+    border-radius: 0;
+    font-size: inherit;
+    line-height: inherit;
 }
 
-/* Style regular links */
+monospace;
+font-size: 0.95em;
+line-height: 1.4;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+overflow-x: auto;
+}
+
+pre {
+    margin: 20px 10px;
+    /*border-left: 4px solid #3498db;*/
+}
+
+/* Mejoras visuales */
+.exercise {
+    background-color: #1e2a3a;
+    border-left: 5px solid #3498db;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 0 8px 8px 0;
+}
+
+/* Enlaces */
 a {
     text-decoration: none;
-    /* Remove underline */
-    color: #e2e2e2;
-    /* Link color 00b0cf */
-    transition: color 0.5s;
-    /* Smooth color transition on hover */
+    color: #3498db;
+    transition: color 0.3s ease;
 }
 
-/* Style links on hover */
 a:hover {
-    text-decoration: underline;
-    /* Underline on hover */
-    color: #14e7d6;
-    /* Change color on hover (e.g., orange) */
+    color: #2ecc71;
+    text-decoration: none;
 }
 
-/* Style visited links - Contact section */
-#contact a:visited {
-    color: #0a0e44;
+/* Listas */
+ul,
+ol {
+    padding-left: 25px;
+    margin-bottom: 15px;
 }
 
-/* Creating transition effect for hidden elements */
-.hidden {
-    opacity: 0;
-    filter: blur(5px);
-    transition: all 1.5s;
-}
-
-.show {
-    opacity: 1;
-    filter: blur(0);
-}
-
-@media(prefers-reduced-motion) {
-    .hidden {
-        transition: none;
+/* Responsive */
+@media (max-width: 600px) {
+    body {
+        font-size: 16px;
+        padding: 15px;
     }
-}
 
-/* Style the sections and center div */
-section {
-    display: grid;
-    place-items: center;
-    align-content: center;
-    min-height: 100vh;
-    padding: 0% 5%;
-}
+    h1 {
+        font-size: 2em;
+    }
 
-/* Style the swiper */
-.swiper {
-    width: 80%;
-    height: auto;
-    min-width: 350px;
-    max-width: 900px;
-}
+    h2 {
+        font-size: 1.75em;
+    }
 
-.swiper-slide img {
-    width: 100%;
+    h3 {
+        font-size: 1.5em;
+    }
+
+    h4 {
+        font-size: 1.25em;
+    }
 }
 
 /* Style the navbar */
@@ -179,101 +238,4 @@ nav a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-/* Responsive design */
-@media (max-width: 992px) {
-    .navbar .links {
-        display: none;
-    }
-
-    .navbar .dropdown-btn {
-        display: block;
-    }
-
-    .dropdown {
-        display: block;
-    }
-}
-
-@media (max-width: 576px) {
-    .dropdown {
-        left: 2rem;
-        width: unset;
-    }
-}
-
-/* Custom styles for the content */
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: #e4e4e4;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #1a1a1a;
-}
-
-h1,
-h2,
-h3,
-h5 {
-    color: #e4e4e4;
-}
-
-h1 {
-    border-bottom: 2px solid #3498db;
-    padding-bottom: 10px;
-}
-
-h2 {
-    background-color: #3498db;
-    color: white;
-    padding: 10px;
-    border-radius: 5px;
-}
-
-h3 {
-    border-left: 5px solid #3498db;
-    padding-left: 10px;
-}
-
-h4 {
-    background-color: #333;
-    padding: 5px 10px;
-    border-radius: 3px;
-}
-
-ul,
-ol {
-    padding-left: 30px;
-}
-
-code {
-    background-color: #333;
-    padding: 2px 4px;
-    border-radius: 3px;
-    font-family: Consolas, monospace;
-}
-
-.exercise {
-    background-color: #262626;
-    border-left: 5px solid #3498db;
-    padding: 10px;
-    margin-bottom: 15px;
-}
-
-pre,
-code {
-    background-color: #2e3b4e;
-    color: #e4e4e4;
-    padding: 10px;
-    border-radius: 5px;
-    font-family: Consolas, "Courier New", monospace;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    overflow-x: auto;
-}
-
-pre {
-    margin: 20px 0;
 }
