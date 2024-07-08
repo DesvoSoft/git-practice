@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos de Python</title>
+    <link rel="stylesheet" href="./src/style-fndmts.css">
+    <link rel="stylesheet" href="./src/style.css">
+    <link rel="icon" href="./src/theme.ico">
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo"><a href="#">Hello world</a></div>
+            <nav>
+                <ul class="links">
+                    <li><a href="#home" class="navbutton">Home</a></li>
+                </ul>
+            </nav>
+            <div class="dropdown-btn">
+                <a href="#">☰</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <li><a href="#home" class="navbutton">Home</a></li>
+        </div>
+
+    </header>
+    <h1>Python</h1>
+    <h2>Fundamentos de la Programación</h2>
+    <hr>
+    <br>
+    <h3>Operadores y Variables</h3><br>
+
+    <h4>Operadores Aritméticos</h4>
+    <ul>
+        <li>Los operadores aritméticos se usan para realizar operaciones matemáticas básicas. Incluyen <code>+</code>
+            (suma), <code>-</code> (resta), <code>*</code> (multiplicación), <code>/</code> (división), <code>//</code>
+            (división entera), <code>%</code> (módulo: devuelve el residuo de una división), y <code>**</code>
+            (potenciación).</li>
+    </ul> <br>
+    <h4>Operadores de Comparación</h4>
+    <p>Comparan dos valores y devuelven un valor booleano (True o False). Incluyen == (igual a), != (diferente de), >
+        (mayor que), < (menor que),>= (mayor o igual que), y <= (menor o igual que).</p>
+                <br>
+                <h4>Operadores Lógicos</h4>
+                <p>Se usan para combinar condiciones. Incluyen and (y), or (o), y not (no).</p>
+                <br>
+                <hr><br>
+                <h3>Variables y Tipos de Datos</h3><br>
+                <p>Las variables se utilizan para almacenar datos que pueden ser usados y manipulados en un programa.
+                </p>
+                <br>
+                <ul>
+                    <h5>Tipos de Datos:</h5>
+                    <li>Enteros (int): Números enteros sin decimales.</li>
+                    <li>Flotantes (float): Números con parte decimal.</li>
+                    <li>Cadenas de texto (str): Secuencias de caracteres.</li>
+                </ul>
+                <br>
+                <hr><br>
+                <h3>Estructuras de Datos</h3><br>
+                <h4>Listas</h4>
+                <p>Las listas son colecciones ordenadas de elementos que pueden ser de cualquier tipo. Se crean usando
+                    corchetes y se pueden modificar después de su creación.</p>
+                <p>Métodos Comunes: Los métodos como append(), remove(), pop(), y sort() permiten agregar, eliminar y
+                    ordenar elementos en una lista.</p>
+                <br>
+                <h4>Slicing y Manipulación Avanzada de Listas</h4>
+                <p>Slicing: Slicing permite acceder a sublistas dentro de una lista usando índices.</p>
+                <br>
+                <hr><br>
+                <h3>Control de Flujo</h3><br>
+                <h4>Condicionales</h4>
+                <p>Estructura if, elif, else: Las declaraciones condicionales permiten ejecutar código basado en ciertas
+                    condiciones.</p>
+                <br>
+                <h4>Condicionales Anidadas</h4>
+                <p>Las condiciones pueden anidarse dentro de otras condiciones para evaluar múltiples criterios.</p>
+                <br>
+                <h4>Uso de Operadores Lógicos en Condicionales</h4>
+                <p>Los operadores and, or, y not se pueden usar para combinar múltiples condiciones en una declaración
+                    if.</p>
+                <br>
+                <hr><br>
+                <h3>Bucles</h3><br>
+                <h4>Ciclo while</h4>
+                <p>Un bucle <code>while</code> repite un bloque de código mientras una condición sea verdadera. Es útil
+                    cuando no se sabe de antemano cuántas veces se debe repetir el bucle.</p>
+                <p>Ejemplo básico de ciclo <code>while</code>:</p>
+                <pre><code>contador = 1
+while contador <= 5:
+    print(contador)
+    contador += 1</code></pre>
+                <p>Este bucle imprimirá los números del 1 al 5. La variable <code>contador</code> se incrementa en 1 en
+                    cada iteración.</p>
+                <br>
+                <h4>Ciclo while con una condición de salida</h4>
+                <p>El bucle <code>while</code> también se puede utilizar con una condición de salida para detenerse
+                    cuando se alcanza un cierto estado.</p>
+                <p>Ejemplo de ciclo <code>while</code> con una condición de salida:</p>
+                <pre><code>respuesta = ""
+while respuesta != "salir":
+    respuesta = input("Escribe 'salir' para terminar: ")
+    print("Escribiste:", respuesta)</code></pre>
+                <p>Este bucle pedirá al usuario que ingrese un texto hasta que escriba "salir". En cada iteración, se
+                    imprime lo que el usuario escribió.</p>
+                <br>
+                <h4>Ciclo for</h4>
+                <p>Un bucle <code>for</code> se utiliza para iterar sobre una secuencia (como una lista o un rango de
+                    números). A diferencia del ciclo <code>while</code>, el número de iteraciones está determinado por
+                    la cantidad de elementos en la secuencia.</p>
+                <p>Ejemplo básico de ciclo <code>for</code>:</p>
+                <pre><code>for i in range(5):
+    print(i)</code></pre>
+                <p>Este bucle imprimirá los números del 0 al 4.</p>
+                <br>
+                <hr><br>
+
+                <h3>Funciones</h3><br>
+                <p>Las funciones son bloques de código reutilizables que realizan una tarea específica. Se definen
+                    usando la palabra clave <code>def</code> seguida del nombre de la función y paréntesis. Dentro de
+                    los paréntesis, se pueden incluir parámetros, que son variables que la función puede recibir como
+                    entrada.</p>
+                <p>Ejemplo de una función simple:</p>
+                <pre><code>def saludar(nombre):
+    print(f"Hola, {nombre}!")
+
+saludar("Steve")</code></pre>
+                <p>Este código define una función llamada <code>saludar</code> que toma un parámetro <code>nombre</code>
+                    e imprime un mensaje de saludo. Luego, la función se llama con el argumento <code>"Steve"</code>, y
+                    se imprimirá <code>Hola, Steve!</code>.</p>
+                <br>
+                <h4>Funciones con valor de retorno</h4>
+                <p>Las funciones pueden devolver un valor usando la palabra clave <code>return</code>. Esto permite que
+                    la función envíe datos de vuelta al lugar donde fue llamada. Utilizar funciones con valor de retorno
+                    es útil cuando necesitas el resultado de un cálculo o una operación para usarlo en otro lugar del
+                    programa.</p>
+                <p>Ejemplo de una función con valor de retorno:</p>
+                <pre><code>def suma(a, b):
+    return a + b
+
+resultado = suma(3, 5)
+print(resultado)</code></pre>
+                <p>Este código define una función <code>suma</code> que toma dos parámetros, <code>a</code> y
+                    <code>b</code>, y devuelve su suma. El resultado de la función se almacena en la variable
+                    <code>resultado</code>, que luego se imprime (mostrará <code>8</code>).
+                </p>
+                <br>
+                <h4>Funciones con múltiples valores de retorno</h4>
+                <p>Las funciones también pueden devolver múltiples valores utilizando tuplas. Esto es útil cuando
+                    necesitas devolver más de un valor desde una función.</p>
+                <p>Ejemplo de una función que devuelve múltiples valores:</p>
+                <pre><code>def operaciones(a, b):
+    suma = a + b
+    resta = a - b
+    return suma, resta
+
+resultado_suma, resultado_resta = operaciones(10, 5)
+print("Suma:", resultado_suma)
+print("Resta:", resultado_resta)</code></pre>
+                <p>Este código define una función <code>operaciones</code> que toma dos parámetros y devuelve la suma y
+                    la resta de esos parámetros. Los resultados se almacenan en dos variables separadas y luego se
+                    imprimen.</p>
+</body>
+
+</html>
+<br>
+<hr><br><br><br>
+<p>Programar no es solo escribir código, es convertir ideas en realidad y resolver problemas del mundo con creatividad y
+    lógica</p><br><br><br>
+<footer>
+    <p>©2024 DesvoSoft</p>
+</footer>
+</body>
+
+</html>
