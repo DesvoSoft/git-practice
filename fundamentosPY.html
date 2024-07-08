@@ -23,7 +23,7 @@
             </div>
         </div>
         <div class="dropdown">
-            <li><a href="#home" class="navbutton">Home</a></li>
+            <li><a href="./index.html" class="navbutton">Home</a></li>
         </div>
 
     </header>
@@ -35,7 +35,7 @@
 
     <h4>Operadores Aritméticos</h4>
     <ul>
-        <li>Los operadores aritméticos se usan para realizar operaciones matemáticas básicas. Incluyen <code>+</code>
+        <li>Se usan para realizar operaciones matemáticas básicas. Incluyen <code>+</code>
             (suma), <code>-</code> (resta), <code>*</code> (multiplicación), <code>/</code> (división), <code>//</code>
             (división entera), <code>%</code> (módulo: devuelve el residuo de una división), y <code>**</code>
             (potenciación).</li>
@@ -49,31 +49,88 @@
                 <br>
                 <hr><br>
                 <h3>Variables y Tipos de Datos</h3><br>
-                <p>Las variables se utilizan para almacenar datos que pueden ser usados y manipulados en un programa.
+                <p>Se utilizan para almacenar datos que pueden ser usados y manipulados en un programa.
                 </p>
                 <br>
                 <ul>
                     <h5>Tipos de Datos:</h5>
-                    <li>Enteros (int): Números enteros sin decimales.</li>
-                    <li>Flotantes (float): Números con parte decimal.</li>
-                    <li>Cadenas de texto (str): Secuencias de caracteres.</li>
+                    <li>Enteros (int): Números enteros sin decimales</li>
+                    <li>Flotantes (float): Números con parte decimal</li>
+                    <li>Cadenas de texto (str): Secuencias de caracteres</li>
                 </ul>
-                <br>
-                <hr><br>
+                <br><hr><br>
                 <h3>Estructuras de Datos</h3><br>
                 <h4>Listas</h4>
-                <p>Las listas son colecciones ordenadas de elementos que pueden ser de cualquier tipo. Se crean usando
+                <p>Son colecciones ordenadas de elementos que pueden ser de cualquier tipo. Se crean usando
                     corchetes y se pueden modificar después de su creación.</p>
                 <p>Métodos Comunes: Los métodos como append(), remove(), pop(), y sort() permiten agregar, eliminar y
                     ordenar elementos en una lista.</p>
                 <br>
                 <h4>Slicing y Manipulación Avanzada de Listas</h4>
-                <p>Slicing: Slicing permite acceder a sublistas dentro de una lista usando índices.</p>
+                <h3 class="code-line" data-line-start=115 data-line-end=116><a
+                        id="Slicing_Corte_en_Listas_115"></a>Slicing (Corte) en Listas</h3>
+                <p class="has-line-data" data-line-start="117" data-line-end="118">El slicing es una forma de
+                    obtener partes específicas de una lista. Imagina que tienes una lista como una fila de bloques de
+                    construcción y quieres tomar solo algunos bloques.</p>
+                <h4 class="code-line" data-line-start=119 data-line-end=120><a
+                        id="Ejemplo_Bsico_de_Slicing_119"></a>Ejemplo Básico de Slicing</h4>
+                <p class="has-line-data" data-line-start="121" data-line-end="122">Supongamos que tienes esta lista de
+                    números:</p>
+                <pre><code class="has-line-data" data-line-start="124" data-line-end="126" class="language-python">numeros = [<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>, <span class="hljs-number">9</span>]
+</code></pre>
+                <ul>
+                    <li class="has-line-data" data-line-start="127" data-line-end="135">
+                        <p class="has-line-data" data-line-start="127" data-line-end="128"><strong>Obtener los primeros
+                                3 números:</strong></p>
+                        <pre><code class="has-line-data" data-line-start="130" data-line-end="132" class="language-python">primeros_tres = numeros[:<span class="hljs-number">3</span>]  <span class="hljs-comment"># [0, 1, 2]</span>
+</code></pre>
+                        <p class="has-line-data" data-line-start="133" data-line-end="134">Aquí, <code>:3</code>
+                            significa “desde el principio hasta el índice 3 (sin incluirlo)”.</p>
+                    </li>
+                    <li class="has-line-data" data-line-start="135" data-line-end="143">
+                        <p class="has-line-data" data-line-start="135" data-line-end="136"><strong>Obtener los últimos 3
+                                números:</strong></p>
+                        <pre><code class="has-line-data" data-line-start="138" data-line-end="140" class="language-python">ultimos_tres = numeros[-<span class="hljs-number">3</span>:]  <span class="hljs-comment"># [7, 8, 9]</span>
+</code></pre>
+                        <p class="has-line-data" data-line-start="141" data-line-end="142">Aquí, <code>-3:</code>
+                            significa “desde el índice -3 (tercer último) hasta el final”.</p>
+                    </li>
+                    <li class="has-line-data" data-line-start="143" data-line-end="151">
+                        <p class="has-line-data" data-line-start="143" data-line-end="144"><strong>Obtener números del
+                                índice 3 al 6:</strong></p>
+                        <pre><code class="has-line-data" data-line-start="146" data-line-end="148" class="language-python">intermedio = numeros[<span class="hljs-number">3</span>:<span class="hljs-number">7</span>]  <span class="hljs-comment"># [3, 4, 5, 6]</span>
+</code></pre>
+                        <p class="has-line-data" data-line-start="149" data-line-end="150">Aquí, <code>3:7</code>
+                            significa “desde el índice 3 hasta el índice 7 (sin incluirlo)”.</p>
+                    </li>
+                </ul>
+                <h4 class="code-line" data-line-start=151 data-line-end=152><a id="Slicing_con_Pasos_151"></a>Slicing
+                    con Pasos</h4>
+                <p class="has-line-data" data-line-start="153" data-line-end="154">Puedes usar slicing para saltar
+                    elementos usando un tercer valor llamado “paso”.</p>
+                <ul>
+                    <li class="has-line-data" data-line-start="155" data-line-end="163">
+                        <p class="has-line-data" data-line-start="155" data-line-end="156"><strong>Obtener cada segundo
+                                número:</strong></p>
+                        <pre><code class="has-line-data" data-line-start="158" data-line-end="160" class="language-python">cada_segundo = numeros[::<span class="hljs-number">2</span>]  <span class="hljs-comment"># [0, 2, 4, 6, 8]</span>
+</code></pre>
+                        <p class="has-line-data" data-line-start="161" data-line-end="162">Aquí, <code>::2</code>
+                            significa “toma cada segundo número”.</p>
+                    </li>
+                    <li class="has-line-data" data-line-start="163" data-line-end="170">
+                        <p class="has-line-data" data-line-start="163" data-line-end="164"><strong>Obtener la lista al
+                                revés:</strong></p>
+                        <pre><code class="has-line-data" data-line-start="166" data-line-end="168" class="language-python">al_reves = numeros[::-<span class="hljs-number">1</span>]  <span class="hljs-comment"># [9, 8, 7, 6, 5, 4, 3, 2, 1, 0]</span>
+</code></pre>
+                        <p class="has-line-data" data-line-start="169" data-line-end="170">Aquí, <code>[::-1]</code>
+                            significa “toma todos los elementos, pero al revés”.</p>
+                    </li>
+                </ul>
                 <br>
                 <hr><br>
                 <h3>Control de Flujo</h3><br>
                 <h4>Condicionales</h4>
-                <p>Estructura if, elif, else: Las declaraciones condicionales permiten ejecutar código basado en ciertas
+                <p>Estructura <code>if</code>, <code>elif</code>, <code>else</code>: Las declaraciones condicionales permiten ejecutar código basado en ciertas
                     condiciones.</p>
                 <br>
                 <h4>Condicionales Anidadas</h4>
@@ -119,7 +176,7 @@ while respuesta != "salir":
                 <hr><br>
 
                 <h3>Funciones</h3><br>
-                <p>Las funciones son bloques de código reutilizables que realizan una tarea específica. Se definen
+                <p>Son bloques de código reutilizables que realizan una tarea específica. Se definen
                     usando la palabra clave <code>def</code> seguida del nombre de la función y paréntesis. Dentro de
                     los paréntesis, se pueden incluir parámetros, que son variables que la función puede recibir como
                     entrada.</p>
