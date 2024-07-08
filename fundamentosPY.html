@@ -179,14 +179,14 @@
             números:</p>
         <pre><code class="has-line-data" data-line-start="124" data-line-end="126" class="language-python">numeros = [<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>, <span class="hljs-number">9</span>]
 </code></pre>
-        <ul>
+        <ul><br>
             <li class="has-line-data" data-line-start="127" data-line-end="135">
                 <p class="has-line-data" data-line-start="127" data-line-end="128"><strong>Obtener los primeros
                         3 números:</strong></p>
                 <pre><code class="has-line-data" data-line-start="130" data-line-end="132" class="language-python">primeros_tres = numeros[:<span class="hljs-number">3</span>]  <span class="hljs-comment"># [0, 1, 2]</span>
 </code></pre>
                 <p class="has-line-data" data-line-start="133" data-line-end="134">Aquí, <code>:3</code>
-                    significa “desde el principio hasta el índice 3 (sin incluirlo)”.</p>
+                    significa “desde el principio hasta el índice 3 (sin incluirlo)”.</p><br>
             </li>
             <li class="has-line-data" data-line-start="135" data-line-end="143">
                 <p class="has-line-data" data-line-start="135" data-line-end="136"><strong>Obtener los últimos 3
@@ -194,7 +194,7 @@
                 <pre><code class="has-line-data" data-line-start="138" data-line-end="140" class="language-python">ultimos_tres = numeros[-<span class="hljs-number">3</span>:]  <span class="hljs-comment"># [7, 8, 9]</span>
 </code></pre>
                 <p class="has-line-data" data-line-start="141" data-line-end="142">Aquí, <code>-3:</code>
-                    significa “desde el índice -3 (tercer último) hasta el final”.</p>
+                    significa “desde el índice -3 (tercer último) hasta el final”.</p><br>
             </li>
             <li class="has-line-data" data-line-start="143" data-line-end="151">
                 <p class="has-line-data" data-line-start="143" data-line-end="144"><strong>Obtener números del
@@ -216,7 +216,7 @@
                 <pre><code class="has-line-data" data-line-start="158" data-line-end="160" class="language-python">cada_segundo = numeros[::<span class="hljs-number">2</span>]  <span class="hljs-comment"># [0, 2, 4, 6, 8]</span>
 </code></pre>
                 <p class="has-line-data" data-line-start="161" data-line-end="162">Aquí, <code>::2</code>
-                    significa “toma cada segundo número”.</p>
+                    significa “toma cada segundo número”.</p><br>
             </li>
             <li class="has-line-data" data-line-start="163" data-line-end="170">
                 <p class="has-line-data" data-line-start="163" data-line-end="164"><strong>Obtener la lista al
@@ -329,6 +329,9 @@ print("Resta:", resultado_resta)</code></pre>
 <hr><br><br><br>
 <p>Programar no es solo escribir código, es convertir ideas en realidad y resolver problemas del mundo con creatividad y
     lógica</p><br><br><br>
+<button id="playButton">Just Do It</button>
+    <div id="videoBackground"></div>
+
 <footer>
     <p>©2024 DesvoSoft</p>
 </footer>
@@ -342,6 +345,19 @@ print("Resta:", resultado_resta)</code></pre>
             x.style.display = "block";
         }
     }
+    document.addEventListener('DOMContentLoaded', function() {
+    const playButton = document.getElementById('playButton');
+    const videoBackground = document.getElementById('videoBackground');
+
+    // URL del video de YouTube
+    const videoUrl = 'https://www.youtube.com/embed/5-sfG8BV8wU?autoplay=1&controls=0&loop=1&mute=1';
+
+    // Función para cambiar el fondo al hacer clic en el botón
+    playButton.addEventListener('click', function() {
+        // Cambiar el fondo a un video de YouTube
+        videoBackground.innerHTML = `<iframe width="100%" height="100%" src="${videoUrl}" frameborder="0" allowfullscreen></iframe>`;
+    });
+});
 </script>
 
 </html>
