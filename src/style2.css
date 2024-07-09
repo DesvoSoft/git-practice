@@ -269,7 +269,8 @@ hr {
     border-radius: 2px;
     position: relative;
     overflow: hidden;
-    animation: neon 2s linear infinite;
+    box-shadow: 0 0 10px rgba(52, 152, 219, 0.5), 0 0 20px rgba(52, 152, 219, 0.5), 0 0 30px rgba(52, 152, 219, 0.5), 0 0 40px rgba(52, 152, 219, 0.5), 0 0 50px rgba(52, 152, 219, 0.5);
+    /*animation: neon 2s linear infinite;*/
 }
 #playButton {
     display: block;
@@ -278,9 +279,9 @@ hr {
     font-size: 1.2em;
     font-weight: bold;
     color: #e4e4e4;
-    background-color: #3498db;
+    background-color: #123b57;
     border: none;
-    border-radius: 5px;
+    border-radius: 55px;
     cursor: pointer;
     text-align: center;
     position: relative;
@@ -302,18 +303,3 @@ hr {
         box-shadow: 0 0 10px rgba(52, 152, 219, 0.5), 0 0 20px rgba(52, 152, 219, 0.5), 0 0 30px rgba(52, 152, 219, 0.5), 0 0 40px rgba(52, 152, 219, 0.5), 0 0 50px rgba(52, 152, 219, 0.5);
     }
 }
-
-/*
-@keyframes neon {
-    0% {
-        box-shadow: 0 0 10px rgba(52, 152, 219, 0.5), 0 0 20px rgba(52, 152, 219, 0.5), 0 0 30px rgba(52, 152, 219, 0.5), 0 0 40px rgba(52, 152, 219, 0.5), 0 0 50px rgba(52, 152, 219, 0.5);
-    }
-
-    50% {
-        box-shadow: 0 0 20px rgba(52, 152, 219, 0.7), 0 0 40px rgba(52, 152, 219, 0.7), 0 0 60px rgba(52, 152, 219, 0.7), 0 0 80px rgba(52, 152, 219, 0.7), 0 0 100px rgba(52, 152, 219, 0.7);
-    }
-
-    100% {
-        box-shadow: 0 0 10px rgba(52, 152, 219, 0.5), 0 0 20px rgba(52, 152, 219, 0.5), 0 0 30px rgba(52, 152, 219, 0.5), 0 0 40px rgba(52, 152, 219, 0.5), 0 0 50px rgba(52, 152, 219, 0.5);
-    }
-}*/
