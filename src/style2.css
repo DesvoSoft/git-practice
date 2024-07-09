@@ -265,7 +265,7 @@ nav a:hover {
 hr {
     border: 0;
     height: 4px;
-    background: linear-gradient(90deg, rgba(52, 152, 219, 1) 0%, rgb(255, 255, 255) 50%, rgba(52, 152, 219, 1) 100%);
+    background: linear-gradient(90deg, rgba(52, 152, 219, 1) 0%, rgb(134, 255, 245) 50%, rgba(52, 152, 219, 1) 100%);
     border-radius: 2px;
     position: relative;
     overflow: hidden;
@@ -278,10 +278,10 @@ hr {
     padding: 15px 30px;
     font-size: 1.2em;
     font-weight: bold;
-    color: #e4e4e4;
+    color: #bebebe;
     background-color: #123b57;
     border: none;
-    border-radius: 55px;
+    border-radius: 25px;
     cursor: pointer;
     text-align: center;
     position: relative;
@@ -289,7 +289,23 @@ hr {
     animation: neon 2s infinite;
     box-shadow: 0 0 10px rgba(52, 152, 219, 0.5), 0 0 20px rgba(52, 152, 219, 0.5), 0 0 30px rgba(52, 152, 219, 0.5), 0 0 40px rgba(52, 152, 219, 0.5), 0 0 50px rgba(52, 152, 219, 0.5);
 }
-
+#playButton:hover {
+    display: block;
+    margin: 20px auto;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #2e2e2e;
+    background-color: #4eecc5;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    animation: neon 2s infinite;
+    box-shadow: 0 0 10px rgba(52, 152, 219, 0.5), 0 0 20px rgba(52, 152, 219, 0.5), 0 0 30px rgba(52, 152, 219, 0.5), 0 0 40px rgba(52, 152, 219, 0.5), 0 0 50px rgba(52, 152, 219, 0.5);
+}
 @keyframes neon {
     0% {
         box-shadow: 0 0 10px rgba(52, 152, 219, 0.5), 0 0 20px rgba(52, 152, 219, 0.5), 0 0 30px rgba(52, 152, 219, 0.5), 0 0 40px rgba(52, 152, 219, 0.5), 0 0 50px rgba(52, 152, 219, 0.5);
