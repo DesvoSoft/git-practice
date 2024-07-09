@@ -1,101 +1,184 @@
-/* Reset some default styles to ensure consistent rendering across browsers */
-body, h1, h2, p, ul {
+/* Reset y estilos base */
+body,
+h1,
+h2,
+p,
+ul {
     margin: 0;
     padding: 0;
 }
 
-/* Set a background gradient and a futuristic font for the entire page, which is not currently visible due to the sections desing (need to improve)*/
 body {
     font-family: 'Roboto', sans-serif;
-    font-size: 20px;
+    font-size: 18px;
     background: linear-gradient(to bottom, #0d1c2e, #084d92);
     color: #e4e4e4;
-    padding: 0;
-    margin: 0;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
-/* Add a bit of spacing to the top and bottom of h1 and h2 headings */
-h1, h2 {
-    margin: 10px 0;
+#videoBackground {
+    display: none;
+    /* Cambiado de visibility: hidden; a display: none; */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
 }
 
-/* Style the header with a dark background, centered text, and a subtle border */
-header {
+/* Encabezados */
+h1,
+h2,
+h3,
+h4,
+h5 {
+    margin: 20px 0 10px;
+    color: #e4e4e4;
+}
+
+h1 {
+    font-size: 2.5em;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+}
+
+h2 {
+    font-size: 2em;
+    background-color: #3498db;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+h3 {
+    font-size: 1.75em;
+    border-left: 5px solid #3498db;
+    padding-left: 15px;
+}
+
+h4 {
+    font-size: 1.5em;
+    color: #3498db;
+    padding-bottom: 5px;
+}
+
+h5 {
+    font-size: 1.5em;
+    /* Incrementa el tamaño de los h5 */
+}
+
+/* Código en línea */
+code {
+    background-color: #1e2a3a;
+    color: #e4e4e4;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: 'Fira Code', Consolas, monospace;
+    font-size: 0.9em;
+}
+
+/* Bloques de código */
+pre {
+    background-color: #1e2a3a;
+    color: #e4e4e4;
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 8px;
+    font-family: 'Fira Code', Consolas, monospace;
+    font-size: 0.95em;
+    line-height: 1.4;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    overflow-x: auto;
+    border-left: 4px solid #3498db;
+    clear: both;
     position: relative;
-    padding: 0 2rem;
-    /* border-bottom: 0.5px solid #00b8d4; */
+    z-index: 1;
 }
 
-/* Style the footer with a dark background and cyan text */
-footer {
-    background-color: #0b1825;
-    color: #00b8d4;
-    text-align: center;
-    padding: 2rem;
+pre code {
+    background-color: transparent;
+    padding: 0;
+    border-radius: 0;
+    font-size: inherit;
+    line-height: inherit;
 }
 
-/* Style regular links */
+pre {
+    margin: 20px 10px;
+}
+
+/* Mejoras visuales */
+.exercise {
+    background-color: #1e2a3a;
+    border-left: 5px solid #3498db;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 0 8px 8px 0;
+}
+
+/* Enlaces */
 a {
-    text-decoration: none; /* Remove underline */
-    color: #e2e2e2;  /*Link color 00b0cf*/
-    transition: color 0.5s; /* Smooth color transition on hover */
     text-decoration: none;
+    color: #3498db;
+    transition: color 0.3s ease;
 }
 
-/* Style links on hover */
 a:hover {
-    text-decoration: underline; /* Underline on hover */
-    color: #14e7d6; /* Change color on hover (e.g., orange) 14e7d6*/
+    color: #2ecc71;
     text-decoration: none;
 }
 
-/* Style visited links - Contact section
-#contact a:visited {
-    color: #0a0e44;
-}*/
-
-/* Creating transition effect for hidden elements */
-.hidden {
-    opacity: 0;
-    filter: blur(5px);
-    /*transform: translateX(-100%);*/
-    transition: all 1.5s;
+/* Listas */
+ul,
+ol {
+    padding-left: 25px;
+    margin-bottom: 15px;
 }
 
-.show {
-    opacity: 1;
-    filter: blur(0);
-    /*transform: translateX(0);*/
-}
+/* Responsive */
+@media (max-width: 600px) {
+    body {
+        font-size: 16px;
+        padding: 15px;
+    }
 
-@media(prefers-reduced-motion) {
-    .hidden {
-        transition: none;
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.75em;
+    }
+
+    h3 {
+        font-size: 1.5em;
+    }
+
+    h4 {
+        font-size: 1.25em;
+    }
+
+    h5 {
+        font-size: 1.25em;
     }
 }
 
-/* Style the sections and center div*/
-section {
-    display: grid;
-    place-items: center;
-    align-content: center;
-    min-height: 100vh;
-    padding: 0% 5%;
+/* Style the navbar */
+nav ul {
+    list-style-type: none;
 }
 
-/* Style the swiper */
-
-.swiper {
-    width: 80%;
-    height: auto;
-    min-width: 350px;
-    max-width: 900px;
-  }
-
-.swiper-slide img {
-    width: 100%;
+nav ul li {
+    list-style: none;
 }
 
+nav a:hover {
+    text-decoration: none;
+}
 
 /* Style the navbar */
 nav ul {
@@ -113,13 +196,15 @@ nav a:hover {
 /* Navbar details */
 .navbutton {
     display: flex;
-    color: #e4e4e4; /* #00b8d4 */
+    color: #e4e4e4;
+    /* #00b8d4 */
     gap: 2rem;
 }
 
 .dropdown-btn {
     display: none;
-    color: #e4e4e4; /* #00b8d4 */
+    color: #e4e4e4;
+    /* #00b8d4 */
     gap: 2rem;
 }
 
@@ -153,7 +238,7 @@ nav a:hover {
 /* Dropdown Menu */
 .dropdown {
     display: none;
-    position:absolute;
+    position: absolute;
     width: 300px;
     right: 2rem;
     top: 60px;
@@ -162,10 +247,10 @@ nav a:hover {
     backdrop-filter: blur(15px);
     border-radius: 10px;
     overflow: hidden;
-    transition: heigth  0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: heigth 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.dropdown.open{
+.dropdown.open {
     height: 183px;
 }
 
@@ -176,24 +261,61 @@ nav a:hover {
     justify-content: center;
 }
 
-/* Responsive design */
-@media (max-width: 992px) {
-    .navbar .links {
-        display: none;
-    }
-
-    .navbar .dropdown-btn {
-        display: block;
-    }
-
-    .dropdown {
-        display: block;
-    }
+/* Personalización de hr con animación neón */
+hr {
+    border: 0;
+    height: 4px;
+    background: linear-gradient(90deg, rgba(52, 152, 219, 1) 0%, rgb(134, 255, 245) 50%, rgba(52, 152, 219, 1) 100%);
+    border-radius: 2px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(52, 152, 219, 0.5), 0 0 20px rgba(52, 152, 219, 0.5), 0 0 30px rgba(52, 152, 219, 0.5), 0 0 40px rgba(52, 152, 219, 0.5), 0 0 50px rgba(52, 152, 219, 0.5);
+    /*animation: neon 2s linear infinite;*/
 }
+#playButton {
+    display: block;
+    margin: 20px auto;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #e4e4e4;
+    background-color: #123b57;
+    border: none;
+    border-radius: 55px;
+    cursor: pointer;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    animation: neon 2s infinite;
+    box-shadow: 0 0 10px rgba(52, 152, 219, 0.5), 0 0 20px rgba(52, 152, 219, 0.5), 0 0 30px rgba(52, 152, 219, 0.5), 0 0 40px rgba(52, 152, 219, 0.5), 0 0 50px rgba(52, 152, 219, 0.5);
+}
+#playButton:hover {
+    display: block;
+    margin: 20px auto;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #2e2e2e;
+    background-color: #60ffd7;
+    border: none;
+    border-radius: 55px;
+    cursor: pointer;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    animation: neon 2s infinite;
+    box-shadow: 0 0 10px rgba(52, 152, 219, 0.5), 0 0 20px rgba(52, 152, 219, 0.5), 0 0 30px rgba(52, 152, 219, 0.5), 0 0 40px rgba(52, 152, 219, 0.5), 0 0 50px rgba(52, 152, 219, 0.5);
+}
+@keyframes neon {
+    0% {
+        box-shadow: 0 0 10px rgba(52, 152, 219, 0.5), 0 0 20px rgba(52, 152, 219, 0.5), 0 0 30px rgba(52, 152, 219, 0.5), 0 0 40px rgba(52, 152, 219, 0.5), 0 0 50px rgba(52, 152, 219, 0.5);
+    }
 
-@media (max-width: 576px) {
-    .dropdown {
-        left: 2rem;
-        width: unset;
+    50% {
+        box-shadow: 0 0 20px rgba(52, 152, 219, 0.7), 0 0 40px rgba(52, 152, 219, 0.7), 0 0 60px rgba(52, 152, 219, 0.7), 0 0 80px rgba(52, 152, 219, 0.7), 0 0 100px rgba(52, 152, 219, 0.7);
+    }
+
+    100% {
+        box-shadow: 0 0 10px rgba(52, 152, 219, 0.5), 0 0 20px rgba(52, 152, 219, 0.5), 0 0 30px rgba(52, 152, 219, 0.5), 0 0 40px rgba(52, 152, 219, 0.5), 0 0 50px rgba(52, 152, 219, 0.5);
     }
 }
