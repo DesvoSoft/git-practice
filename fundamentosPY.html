@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fundamentos de Python</title>
+    <script defer src="./src/script.js"></script>
     <link rel="stylesheet" href="./src/style2.css">
     <link rel="icon" href="./src/theme.ico">
 </head>
@@ -12,22 +13,24 @@
 <body>
     <header>
         <div class="navbar">
-            <div class="logo"><a href="#">Hello World</a></div>
+            <div class="logo"><a href="#">Hello world</a></div>
             <nav>
                 <ul class="links">
                     <li><a href="./index.html" class="navbutton">Homepage</a></li>
                 </ul>
             </nav>
             <div class="dropdown-btn">
-                <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">☰</a>
+                <a href="#">&#9776;</a>
             </div>
         </div>
-        <div id="dropdownMenu" class="dropdown">
-            <li><a href="./index.html" class="navbutton">Home</a></li>
+        <div class="dropdown">
+            <ul>
+                <li><a href="./index.html" class="navbutton">Homepage</a></li>
+            </ul>
         </div>
 
     </header>
-    <h1>Python</h1>
+    <h1>Python</h1><br>
     <h2>Fundamentos de la Programación</h2>
     <br>
     <h3>Operadores</h3><br>
@@ -323,12 +326,10 @@ print("Resta:", resultado_resta)</code></pre>
         imprimen.</p>
     <br>
     <hr><br><br><br>
-    <p>Programar no es solo escribir código, es convertir ideas en realidad y resolver problemas del mundo con
-        creatividad y
-        lógica</p><br><br><br>
+    <p>Si puedes imaginarlo, puedes programarlo. La curiosidad y el aprendizaje constante son tus mejores herramientas para transformar sueños en código</p><br><br><br><br><br><br><br>
     <button id="playButton">JUST DO IT</button>
+    <br><br><br><br><br><br>
     <div id="videoBackground"></div>
-
     <footer>
         <p>©2024 DesvoSoft</p>
     </footer>
@@ -339,7 +340,7 @@ print("Resta:", resultado_resta)</code></pre>
         const videoBackground = document.getElementById('videoBackground');
 
         // URL del video de YouTube con controles y sonido
-        const videoUrl = 'https://www.youtube.com/embed/5-sfG8BV8wU?autoplay=1&controls=0&loop=1&amp;vq=hd1080';
+        const videoUrl = 'https://www.youtube.com/embed/5-sfG8BV8wU?autoplay=1&controls=0&loop=0&amp;vq=hd1080';
 
         // Función para reproducir el video y mostrar el div
         playButton.addEventListener('click', function () {
@@ -350,6 +351,22 @@ print("Resta:", resultado_resta)</code></pre>
 
             // Mostrar el div de videoBackground
             videoBackground.style.display = 'block';
+        });
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const dropdownBtn = document.querySelector('.dropdown-btn');
+        const dropdown = document.querySelector('.dropdown');
+
+        dropdownBtn.addEventListener('click', function() {
+            dropdown.classList.toggle('open');
+        });
+
+        // Cerrar el menu al hacer clic fuera de él
+        document.addEventListener('click', function(event) {
+            if (!dropdown.contains(event.target) && !dropdownBtn.contains(event.target)) {
+                dropdown.classList.remove('open');
+            }
         });
     });
 

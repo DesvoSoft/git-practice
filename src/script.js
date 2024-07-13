@@ -14,7 +14,6 @@ const observer = new IntersectionObserver((entries) => {
 const hiddenElements = document.querySelectorAll('.hidden');
 hiddenElements.forEach((el) => observer.observe(el));
 
-
 var swiper = new Swiper(".mySwiper", {
     effect: 'coverflow',
     direction: 'horizontal',
@@ -28,15 +27,14 @@ var swiper = new Swiper(".mySwiper", {
         depth: 300,
         modifier: 1,
         slideShadows : true,
-        },  
-    
+    },  
 
     // Loop and autoplay
     loop: true,
     autoplay: {
         delay: 5000,
         disableOnInteraction: false,
-        },
+    },
         
      /*Pagination
     pagination: {
@@ -48,19 +46,14 @@ var swiper = new Swiper(".mySwiper", {
     keyboard: {
         enabled: true,
         onlyInViewport: false,
-      },
+    },
 });
-
 
 /* Creating a dropdown menu  */
 const toggleBtn = document.querySelector('.dropdown-btn');
-const toggleBtnIcon = document.querySelector('.dropdown-btn a');
 const dropdown = document.querySelector('.dropdown');
 
 /* Adding an event listener to the button */
-
 toggleBtn.addEventListener('click', function() {
-    dropdown.classList.toggle('open')
-    const isOpen = dropdown.classList.contains('open');
-}
-);
+    dropdown.classList.toggle('open');
+});

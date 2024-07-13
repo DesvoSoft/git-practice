@@ -11,7 +11,7 @@ ul {
 body {
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
-    background: linear-gradient(to bottom, #0d1c2e, #084d92);
+    background: linear-gradient(to bottom, #0d1c2e, #0458ac);
     color: #e4e4e4;
     line-height: 1.6;
     max-width: 800px;
@@ -30,7 +30,6 @@ body {
     z-index: -1;
 }
 
-/* Encabezados */
 h1,
 h2,
 h3,
@@ -52,23 +51,25 @@ h2 {
     color: white;
     padding: 10px 15px;
     border-radius: 5px;
+    /*animation: neon 2s infinite;*/
 }
 
 h3 {
     font-size: 1.75em;
     border-left: 5px solid #3498db;
     padding-left: 15px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
 }
 
 h4 {
     font-size: 1.5em;
     color: #3498db;
     padding-bottom: 5px;
+    /*text-shadow: 0 0 10px rgba(0, 26, 56, 0.8);*/
 }
 
 h5 {
     font-size: 1.5em;
-    /* Incrementa el tamaño de los h5 */
 }
 
 /* Código en línea */
@@ -111,7 +112,6 @@ pre {
     margin: 20px 10px;
 }
 
-/* Mejoras visuales */
 .exercise {
     background-color: #1e2a3a;
     border-left: 5px solid #3498db;
@@ -135,36 +135,8 @@ a:hover {
 /* Listas */
 ul,
 ol {
-    padding-left: 25px;
-    margin-bottom: 15px;
-}
-
-/* Responsive */
-@media (max-width: 600px) {
-    body {
-        font-size: 16px;
-        padding: 15px;
-    }
-
-    h1 {
-        font-size: 2em;
-    }
-
-    h2 {
-        font-size: 1.75em;
-    }
-
-    h3 {
-        font-size: 1.5em;
-    }
-
-    h4 {
-        font-size: 1.25em;
-    }
-
-    h5 {
-        font-size: 1.25em;
-    }
+    padding-left: auto;
+    margin-bottom: auto;
 }
 
 /* Style the navbar */
@@ -196,8 +168,7 @@ nav a:hover {
 /* Navbar details */
 .navbutton {
     display: flex;
-    color: #e4e4e4;
-    /* #00b8d4 */
+    color: #e4e4e4; /* #00b8d4 */
     gap: 2rem;
 }
 
@@ -238,7 +209,7 @@ nav a:hover {
 /* Dropdown Menu */
 .dropdown {
     display: none;
-    position: absolute;
+    position:absolute;
     width: 300px;
     right: 2rem;
     top: 60px;
@@ -247,11 +218,12 @@ nav a:hover {
     backdrop-filter: blur(15px);
     border-radius: 10px;
     overflow: hidden;
-    transition: heigth 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: heigth  0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 1000;
 }
 
-.dropdown.open {
-    height: 183px;
+.dropdown.open{
+    height: auto;
 }
 
 .dropdown li {
@@ -261,7 +233,6 @@ nav a:hover {
     justify-content: center;
 }
 
-/* Personalización de hr con animación neón */
 hr {
     border: 0;
     height: 4px;
@@ -272,6 +243,7 @@ hr {
     box-shadow: 0 0 10px rgba(52, 152, 219, 0.5), 0 0 20px rgba(52, 152, 219, 0.5), 0 0 30px rgba(52, 152, 219, 0.5), 0 0 40px rgba(52, 152, 219, 0.5), 0 0 50px rgba(52, 152, 219, 0.5);
     /*animation: neon 2s linear infinite;*/
 }
+
 #playButton {
     display: block;
     margin: 20px auto;
@@ -306,6 +278,56 @@ hr {
     animation: neon 2s infinite;
     box-shadow: 0 0 10px rgba(52, 152, 219, 0.5), 0 0 20px rgba(52, 152, 219, 0.5), 0 0 30px rgba(52, 152, 219, 0.5), 0 0 40px rgba(52, 152, 219, 0.5), 0 0 50px rgba(52, 152, 219, 0.5);
 }
+
+/* Responsive design */
+@media (max-width: 992px) {
+    .navbar .links {
+        display: none;
+    }
+
+    .navbar .dropdown-btn {
+        display: block;
+    }
+
+    .dropdown {
+        display: block;
+    }
+}
+
+@media (max-width: 576px) {
+    .dropdown {
+        left: 2rem;
+        width: unset;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        font-size: 16px;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.75em;
+    }
+
+    h3 {
+        font-size: 1.5em;
+    }
+
+    h4 {
+        font-size: 1.25em;
+    }
+
+    h5 {
+        font-size: 1.25em;
+    }
+}
+
 @keyframes neon {
     0% {
         box-shadow: 0 0 10px rgba(52, 152, 219, 0.5), 0 0 20px rgba(52, 152, 219, 0.5), 0 0 30px rgba(52, 152, 219, 0.5), 0 0 40px rgba(52, 152, 219, 0.5), 0 0 50px rgba(52, 152, 219, 0.5);
@@ -318,4 +340,9 @@ hr {
     100% {
         box-shadow: 0 0 10px rgba(52, 152, 219, 0.5), 0 0 20px rgba(52, 152, 219, 0.5), 0 0 30px rgba(52, 152, 219, 0.5), 0 0 40px rgba(52, 152, 219, 0.5), 0 0 50px rgba(52, 152, 219, 0.5);
     }
+}
+
+footer{
+    text-align: center;
+    padding: 2rem;
 }
