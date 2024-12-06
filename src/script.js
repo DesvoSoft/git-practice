@@ -49,7 +49,7 @@ var swiper = new Swiper(".mySwiper", {
     },
 });
 
-/* Creating a dropdown menu  */
+/* Dropdown menu  */
 const toggleBtn = document.querySelector('.dropdown-btn');
 const dropdown = document.querySelector('.dropdown');
 
@@ -57,3 +57,4 @@ const dropdown = document.querySelector('.dropdown');
 toggleBtn.addEventListener('click', function() {
     dropdown.classList.toggle('open');
 });
+
