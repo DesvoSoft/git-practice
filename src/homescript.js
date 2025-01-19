@@ -22,9 +22,9 @@ var swiper = new Swiper(".mySwiper", {
 
     // Settings for coverflow effect
     coverflowEffect: {
-        rotate: 15,
-        stretch: 0,
-        depth: 300,
+        rotate: 25,
+        stretch: 10,
+        depth: 500,
         modifier: 1,
         slideShadows : true,
     },  
@@ -32,11 +32,11 @@ var swiper = new Swiper(".mySwiper", {
     // Loop and autoplay
     loop: true,
     autoplay: {
-        delay: 5000,
+        delay: 2000,
         disableOnInteraction: false,
     },
         
-     /*Pagination
+    /*Pagination
     pagination: {
     el: '.swiper-pagination',
     },*/
@@ -47,13 +47,4 @@ var swiper = new Swiper(".mySwiper", {
         enabled: true,
         onlyInViewport: false,
     },
-});
-
-/* Creating a dropdown menu  */
-const toggleBtn = document.querySelector('.dropdown-btn');
-const dropdown = document.querySelector('.dropdown');
-
-/* Adding an event listener to the button */
-toggleBtn.addEventListener('click', function() {
-    dropdown.classList.toggle('open');
 });

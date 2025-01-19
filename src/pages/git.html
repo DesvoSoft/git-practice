@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git</title>
+    <link rel="stylesheet" href="../css/page-specific/info-pages.css">
+    <script defer src="../script.js"></script>
+    <link rel="icon" href="../theme.ico">
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo"><a href="../../index.html">Hello world</a></div>
+            <nav>
+                <ul class="links">
+                    <li><a href="../../index.html" class="navbutton">Homepage</a></li>
+                    <li><a href="python.html" class="navbutton">Python</a></li>
+                    <li><a href="javascript.html" class="navbutton">Javascript</a></li>
+                </ul>
+            </nav>
+            <div class="dropdown-btn">
+                <a href="#">&#9776;</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <ul>
+                <li><a href="../../index.html" class="navbutton">Homepage</a></li>
+                <li><a href="python.html" class="navbutton">Python</a></li>
+                <li><a href="javascript.html" class="navbutton">Javascript</a></li>
+            </ul>
+        </div>
+
+        <h1>Guía de Git</h1>
+        <p>Domina Git para enfrentar cualquier desafío en desarrollo.</p>
+    </header>
+
+    <main>
+        <!-- Glosario -->
+        <section id="glossary">
+            <br><h2>Glosario</h2><br>
+            <p>Algunos términos clave que encontrarás en esta guía:</p><br>
+            <ul>
+                <li><strong>Repositorio:</strong> Un directorio que contiene tu proyecto y el historial de cambios.</li>
+                <li><strong>Commit:</strong> Una instantánea de los cambios realizados en el repositorio.</li>
+                <li><strong>Branch:</strong> Una rama que permite trabajar de manera independiente en nuevas funcionalidades.</li>
+                <li><strong>Merge:</strong> La combinación de cambios de diferentes ramas.</li>
+                <li><strong>Pull Request:</strong> Una solicitud para fusionar cambios en el repositorio principal.</li>
+                <li><strong>Rebase:</strong> Reorganizar commits para mantener un historial lineal.</li>
+                <li><strong>Stash:</strong> Un lugar temporal para guardar cambios sin comprometerlos.</li>
+            </ul>
+            <br><hr><br>
+        </section>
+
+        <!-- Introduccion -->
+        <section id="intro">
+            <h2>¿Qué es Git?</h2><br>
+            <p>Git es un sistema de control de versiones distribuido que permite a los desarrolladores gestionar y rastrear cambios en el código fuente de manera eficiente. Es una herramienta fundamental en el desarrollo de software colaborativo.</p>
+            <p>Git guarda un historial completo de cambios, lo que facilita la colaboración, el seguimiento de errores y la experimentación sin riesgo de pérdida de datos.</p>
+            <br><hr><br>
+        </section>
+
+        <!-- Configuracion Inicial -->
+        <section id="setup">
+            <h2>Configuración Inicial</h2><br>
+            <p>Antes de empezar a usar Git, debes configurarlo en tu entorno para garantizar que tus cambios estén correctamente identificados.</p>
+            <pre><code># Configurar tu nombre de usuario y correo
+$ git config --global user.name "Tu Nombre"
+$ git config --global user.email "tuemail@ejemplo.com"
+
+# Verificar configuración
+$ git config --list</code></pre><br>
+            <p>La configuración global aplica para todos los proyectos en tu sistema. Puedes usar el argumento <code>--local</code> para configuraciones específicas de un proyecto.</p><br>
+            <p><strong>Ejemplo:</strong></p><br>
+            <p>Si trabajas en dos proyectos diferentes con distintos nombres o correos, configura los valores locales para cada uno:</p>
+            <pre><code>$ git config --local user.name "Nombre Proyecto A"
+$ git config --local user.email "emailA@ejemplo.com"</code></pre>
+            <br><hr><br>
+        </section>
+
+        <!-- Comandos Basicos -->
+        <section id="basic-commands">
+            <h2>Comandos Básicos</h2><br>
+            <p>Estos comandos son esenciales para empezar a trabajar con Git:</p><br>
+            <ul>
+                <li><code>git init</code>: Inicializa un nuevo repositorio en tu directorio actual.</li>
+                <li><code>git add [archivo]</code>: Agrega archivos al área de preparación (staging).</li>
+                <li><code>git commit -m "mensaje"</code>: Guarda los cambios en el historial con un mensaje descriptivo.</li>
+                <li><code>git status</code>: Muestra el estado del repositorio (archivos modificados, no rastreados, etc.).</li>
+                <li><code>git log</code>: Muestra el historial de commits. Usa <code>git log --oneline</code> para un resumen.</li>
+            </ul><br>
+            <p><strong>Ejemplo:</strong></p>
+            <pre><code># Crear un nuevo repositorio
+$ mkdir mi_proyecto
+$ cd mi_proyecto
+$ git init
+
+# Crear un archivo y agregarlo al repositorio
+$ echo "Hola Mundo" > archivo.txt
+$ git add archivo.txt
+$ git commit -m "Agregar archivo inicial"</code></pre>
+            <br><hr><br>
+        </section>
+
+        <!-- Temas Avanzados -->
+        <section id="advanced-topics">
+            <h2>Usos Complejos</h2><br>
+
+            <h3>Rebase</h3>
+            <p>El rebase permite reescribir el historial de commits para mantener un historial limpio y lineal.</p>
+            <pre><code># Rebase de tu rama con main
+$ git checkout feature-branch
+$ git rebase main
+
+# Rebase interactivo para editar commits
+$ git rebase -i HEAD~3</code></pre><br>
+
+            <h3>Cherry-pick</h3>
+            <p>Permite aplicar un commit específico de una rama a otra.</p>
+            <pre><code># Aplicar un commit a tu rama actual
+$ git cherry-pick ID_del_commit</code></pre><br>
+
+            <h3>Stash</h3>
+            <p>Guarda temporalmente tus cambios para trabajar en otra tarea.</p>
+            <pre><code># Guardar cambios en el stash
+$ git stash
+
+# Recuperar cambios guardados
+$ git stash pop</code></pre><br>
+
+            <h3>Squash Commits</h3>
+            <p>Combina múltiples commits en uno solo para limpiar el historial.</p>
+            <pre><code># Combinar commits durante un rebase interactivo
+$ git rebase -i HEAD~n
+
+# Marca los commits como 'squash' o 's'
+$ git commit --amend</code></pre><br>
+
+            <h3>Conflictos en Merge y Pull Requests</h3>
+            <p>Resolver conflictos es una tarea común al colaborar en Git. Sigue estos pasos:</p>
+            <pre><code># Intentar hacer un merge
+$ git merge feature-branch
+
+# Identificar conflictos
+$ git status
+
+# Editar archivos en conflicto y resolverlos
+# Luego, agregarlos nuevamente al staging
+$ git add archivo_resuelto
+
+# Finalizar el merge
+$ git commit
+
+# En un Pull Request, comenta sobre los conflictos resueltos para facilitar la revisión.</code></pre>
+            <br><hr><br>
+        </section>
+
+        <!-- Workflows Colaborativos -->
+        <section id="workflows">
+            <h2>Workflows Colaborativos</h2><br>
+            <h3>Gitflow</h3>
+            <p>Un flujo de trabajo basado en ramas para gestionar desarrollos complejos.</p><br>
+            <p>Principales ramas:</p><br>
+            <ul>
+                <li><strong>Main:</strong> Código listo para producción.</li>
+                <li><strong>Develop:</strong> Código en desarrollo.</li>
+                <li><strong>Feature:</strong> Nuevas características.</li>
+                <li><strong>Release:</strong> Preparación de nuevas versiones.</li>
+                <li><strong>Hotfix:</strong> Correcciones urgentes en producción.</li>
+            </ul><br>
+            <img src="..\images\gitflow-diagram.png" alt="Diagrama de Gitflow" style="max-width:100%;height:auto;"><br><br>
+            <p><strong>Ejemplo:</strong></p>
+            <pre><code># Crear una rama de características
+$ git checkout -b feature/nueva-funcion develop
+
+# Fusionar rama de características
+$ git checkout develop
+$ git merge feature/nueva-funcion</code></pre>
+            <br>
+            <h3>Trunk-based Development</h3>
+            <p>Un enfoque que fomenta integraciones frecuentes al branch principal.</p><br>
+            <p><strong>Claves:</strong></p>
+            <ul>
+                <li>Ramas cortas y de vida breve.</li>
+                <li>Integraciones diarias para reducir conflictos.</li>
+            </ul>
+            <br>
+            <p><strong>Ejemplo:</strong></p>
+            <pre><code># Crear una rama corta
+$ git checkout -b fix/bug-123
+
+# Fusionar rápidamente después de las pruebas
+$ git checkout main
+$ git merge fix/bug-123</code></pre>
+            <br><hr><br>
+        </section>
+
+        <!-- Escenarios Complejos -->
+        <section id="advanced-scenarios">
+            <h2>Escenarios Avanzados</h2><br>
+            <h3>Recuperación de Commits Eliminados</h3>
+            <p>Usa el reflog para recuperar commits perdidos.</p>
+            <pre><code># Ver el historial del reflog
+$ git reflog
+
+# Restaurar un commit perdido
+$ git checkout ID_del_commit</code></pre>
+            <br>
+            <h3>Resolución de Conflictos Complejos</h3>
+            <p>Cuando múltiples archivos tienen conflictos:</p>
+            <pre><code># Identificar conflictos
+$ git status
+
+# Usar herramientas gráficas (como Meld)
+$ git mergetool
+
+# Resolver manualmente y confirmar
+$ git add archivo_resuelto
+$ git commit</code></pre>
+            <br>
+            <h3>Recuperación de un Branch Eliminado</h3>
+            <p>Restaura un branch eliminado utilizando su commit más reciente.</p>
+            <pre><code># Encontrar el commit más reciente
+$ git reflog
+
+# Crear un branch desde el commit
+$ git checkout -b nombre_branch ID_del_commit</code></pre>
+            <br>
+            <h3>Dividir Commits</h3>
+            <p>Divide un commit en varios más pequeños.</p>
+            <pre><code># Inicia un rebase interactivo
+$ git rebase -i HEAD~n
+
+# Marca el commit como 'edit'
+$ git reset HEAD~
+
+# Crea nuevos commits con los cambios deseados
+$ git add parte1
+$ git commit -m "Mensaje parte 1"
+$ git add parte2
+$ git commit -m "Mensaje parte 2"</code></pre>
+            <br><hr><br>
+        </section>
+
+        <!-- Recursos Adicionales -->
+        <section id="resources">
+            <h2>Recursos Adicionales</h2>
+            <br>
+            <p>Explora más sobre Git con estos recursos:</p>
+            <br>
+            <ul>
+                <li><a href="https://git-scm.com/doc" target="_blank">Documentación oficial de Git</a></li>
+                <li><a href="https://learngitbranching.js.org/" target="_blank">Learn Git Branching</a></li>
+                <li><a href="https://guides.github.com/" target="_blank">Guías de GitHub</a></li>
+                <li><a href="https://www.atlassian.com/git" target="_blank">Guías de Atlassian sobre Git</a></li>
+                <li><a href="https://www.freecodecamp.org/news/git-cheat-sheet/" target="_blank">FreeCodeCamp: Hoja de referencia de Git</a></li>
+            </ul>
+            <br><br>
+            <p>Aprender Git es una inversión clave para desarrolladores de software.</p>
+            <br><hr><br>
+        </section>
+
+        <!-- Interactividad -->
+        <section id="fun">
+            <p>Si puedes imaginarlo, puedes programarlo. La curiosidad y el aprendizaje constante son tus mejores herramientas para transformar sueños en codigo</p><br><br><br><br><br><br><br>
+            <button id="playButton">JUST DO IT</button>
+            <br><br><br><br><br><br>
+            <div id="videoBackground"></div>
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    const playButton = document.getElementById('playButton');
+                    const videoBackground = document.getElementById('videoBackground');
+            
+                    // URL del video de YouTube con controles y sonido
+                    const videoUrl = 'https://www.youtube.com/embed/OI--6-kR3xc?autoplay=1&controls=0&loop=0&amp;vq=hd1080';
+            
+                    // Funcion para reproducir el video y mostrar el div
+                    playButton.addEventListener('click', function () {
+                        // Inyectar el video de YouTube en el fondo si aun no se ha inyectado
+                        if (!videoBackground.innerHTML) {
+                            videoBackground.innerHTML = `<iframe width="100%" height="100%" src="${videoUrl}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>`;
+                        }
+            
+                        // Mostrar el div de videoBackground
+                        videoBackground.style.display = 'block';
+                    });
+                });
+            
+            </script>
+        </section>
+    </main>
+
+    <footer>
+        <footer>
+            <p>©2025 DesvoSoft</p>
+        </footer>
+    </body>
+    <script src="../navbar.js"></script>
+</body>
+</html>

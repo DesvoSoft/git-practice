@@ -1,0 +1,13 @@
+/* ============================
+   SECCION: Swiper (Galeria)
+   ============================ */
+
+   .swiper {
+    width: 80%;
+    min-width: 350px;
+    max-width: 900px;
+}
+
+.swiper-slide img {
+    width: 100%;
+}

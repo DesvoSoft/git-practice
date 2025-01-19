@@ -5,18 +5,20 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fundamentos de Python</title>
-    <script defer src="./src/script.js"></script>
-    <link rel="stylesheet" href="./src/style2.css">
-    <link rel="icon" href="./src/theme.ico">
+    <link rel="stylesheet" href="../css/page-specific/info-pages.css">
+    <script defer src="../script.js"></script>
+    <link rel="icon" href="../theme.ico">
 </head>
 
 <body>
     <header>
         <div class="navbar">
-            <div class="logo"><a href="#">Hello world</a></div>
+            <div class="logo"><a href="../../index.html">Hello world</a></div>
             <nav>
                 <ul class="links">
-                    <li><a href="./index.html" class="navbutton">Homepage</a></li>
+                    <li><a href="../../index.html" class="navbutton">Homepage</a></li>
+                    <li><a href="javascript.html" class="navbutton">Javascript</a></li>
+                    <li><a href="git.html" class="navbutton">Git</a></li>
                 </ul>
             </nav>
             <div class="dropdown-btn">
@@ -25,28 +27,30 @@
         </div>
         <div class="dropdown">
             <ul>
-                <li><a href="./index.html" class="navbutton">Homepage</a></li>
+                <li><a href="../../index.html" class="navbutton">Homepage</a></li>
+                <li><a href="javascript.html" class="navbutton">Javascript</a></li>
+                <li><a href="git.html" class="navbutton">Git</a></li>
             </ul>
         </div>
 
     </header>
     <h1>Python</h1><br>
-    <h2>Fundamentos de la Programación</h2>
+    <h2>Fundamentos de la Programacion</h2>
     <br>
     <h3>Operadores</h3><br>
 
     <h4>Operadores Aritméticos</h4>
     <p>Se usan para realizar operaciones matemáticas básicas. Incluyen <code>+</code>
-        (suma), <code>-</code> (resta), <code>*</code> (multiplicación), <code>/</code> (división), <code>//</code>
-        (división entera), <code>%</code> (módulo: devuelve el residuo de una división), y <code>**</code>
-        (potenciación).
+        (suma), <code>-</code> (resta), <code>*</code> (multiplicacion), <code>/</code> (division), <code>//</code>
+        (division entera), <code>%</code> (modulo: devuelve el residuo de una division), y <code>**</code>
+        (potenciacion).
     </p>
-    <h4>Operadores de Comparación</h4>
+    <h4>Operadores de Comparacion</h4>
     <p>Comparan dos valores y devuelven un valor booleano (True o False). Incluyen <code>==</code> (igual a),
         <code>!=</code> (diferente de), <code>&gt;</code> (mayor que), <code>&lt;</code> (menor que),
         <code>&gt;=</code> (mayor o igual que), y <code>&lt;=</code> (menor o igual que).
     </p>
-    <h4>Operadores Lógicos</h4>
+    <h4>Operadores Logicos</h4>
     <p>Se usan para combinar condiciones. Incluyen <code>and</code> (y), <code>or</code> (o), y <code>not</code>
         (no).</p>
     <br>
@@ -57,8 +61,8 @@
     <br>
     <ul>
         <h5>Tipos de datos:</h5>
-        <li>Enteros | <code>int</code> | Números enteros sin decimales</li>
-        <li>Flotantes | <code>float</code> | Números con parte decimal</li>
+        <li>Enteros | <code>int</code> | Numeros enteros sin decimales</li>
+        <li>Flotantes | <code>float</code> | Numeros con parte decimal</li>
         <li>Cadenas de texto | <code>str</code> | Secuencias de caracteres</li>
         <li>Booleanos | <code>True</code> / <code>False</code> |</li>
     </ul>
@@ -67,11 +71,11 @@
     <h3>Estructuras de Datos</h3><br>
     <h4>Listas</h4>
     <p>Son colecciones ordenadas de elementos que pueden ser de cualquier tipo. Se crean usando
-        corchetes <code>[]</code> y se pueden modificar después de su creación.</p>
+        corchetes <code>[]</code> y se pueden modificar después de su creacion.</p>
     <br>
     <h4>Métodos de listas en Python</h4>
 
-    <p>Python tiene métodos útiles para manipular elementos en listas.<br>A continuación una breve descripción y
+    <p>Python tiene métodos utiles para manipular elementos en listas.<br>A continuacion una breve descripcion y
         ejemplos de algunos de los métodos más comunes:</p>
     <br>
     <h5>append(x)</h5>
@@ -95,7 +99,7 @@
     <br>
     <h5>insert(i, x)</h5>
 
-    <p>Inserta un elemento en una posición específica.</p>
+    <p>Inserta un elemento en una posicion especifica.</p>
 
     <pre>
     lista = [1, 2, 3]
@@ -113,7 +117,7 @@
     <br>
     <h5>pop([i])</h5>
 
-    <p>Elimina y devuelve el elemento en la posición i. Si no se especifica i, elimina y devuelve el último
+    <p>Elimina y devuelve el elemento en la posicion i. Si no se especifica i, elimina y devuelve el ultimo
         elemento.</p>
 
     <pre>
@@ -133,7 +137,7 @@
     <br>
     <h5>index(x[, start[, end]])</h5>
 
-    <p>Devuelve el índice de la primera ocurrencia de x.</p>
+    <p>Devuelve el indice de la primera ocurrencia de x.</p>
     <pre>
     lista = [1, 2, 3, 2]
     indice = lista.index(2)
@@ -141,7 +145,7 @@
     <br>
     <h5>count(x)</h5>
 
-    <p>Devuelve el número de veces que x aparece en la lista.</p>
+    <p>Devuelve el numero de veces que x aparece en la lista.</p>
 
     <pre>
     lista = [1, 2, 3, 2, 2]
@@ -150,7 +154,7 @@
     <br>
     <h5>sort(key=None, reverse=False)</h5>
 
-    <p>Ordena la lista in-place. Ordena por defecto en orden ascendente. Se puede especificar una función de clave y
+    <p>Ordena la lista in-place. Ordena por defecto en orden ascendente. Se puede especificar una funcion de clave y
         un orden inverso.</p>
 
     <pre>
@@ -173,38 +177,38 @@
     <h4 class="code-line" data-line-start=115 data-line-end=116><a id="Slicing_Corte_en_Listas_115"></a>Slicing
         (Corte) en Listas</h4>
     <p class="has-line-data" data-line-start="117" data-line-end="118">El slicing en Python es una forma de
-        obtener partes específicas de una lista. Imagina que tienes una lista como una fila de bloques de
-        construcción y quieres tomar solo algunos bloques.</p><br>
+        obtener partes especificas de una lista. Imagina que tienes una lista como una fila de bloques de
+        construccion y quieres tomar solo algunos bloques.</p><br>
     <h5 class="code-line" data-line-start=119 data-line-end=120><a id="Ejemplo_Bsico_de_Slicing_119"></a>Ejemplo de
         Slicing</h5>
     <p class="has-line-data" data-line-start="121" data-line-end="122">Supongamos que tienes esta lista de
-        números:</p>
+        numeros:</p>
     <pre><code class="has-line-data" data-line-start="124" data-line-end="126" class="language-python">numeros = [<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>, <span class="hljs-number">9</span>]
 </code></pre>
     <ul><br>
         <li class="has-line-data" data-line-start="127" data-line-end="135">
             <p class="has-line-data" data-line-start="127" data-line-end="128"><strong>Obtener los primeros
-                    3 números:</strong></p>
+                    3 numeros:</strong></p>
             <pre><code class="has-line-data" data-line-start="130" data-line-end="132" class="language-python">primeros_tres = numeros[:<span class="hljs-number">3</span>]  <span class="hljs-comment"># [0, 1, 2]</span>
 </code></pre>
-            <p class="has-line-data" data-line-start="133" data-line-end="134">Aquí, <code>:3</code>
-                significa “desde el principio hasta el índice 3 (sin incluirlo)”.</p><br>
+            <p class="has-line-data" data-line-start="133" data-line-end="134">Aqui, <code>:3</code>
+                significa “desde el principio hasta el indice 3 (sin incluirlo)”.</p><br>
         </li>
         <li class="has-line-data" data-line-start="135" data-line-end="143">
-            <p class="has-line-data" data-line-start="135" data-line-end="136"><strong>Obtener los últimos 3
-                    números:</strong></p>
+            <p class="has-line-data" data-line-start="135" data-line-end="136"><strong>Obtener los ultimos 3
+                    numeros:</strong></p>
             <pre><code class="has-line-data" data-line-start="138" data-line-end="140" class="language-python">ultimos_tres = numeros[-<span class="hljs-number">3</span>:]  <span class="hljs-comment"># [7, 8, 9]</span>
 </code></pre>
-            <p class="has-line-data" data-line-start="141" data-line-end="142">Aquí, <code>-3:</code>
-                significa “desde el índice -3 (tercer último) hasta el final”.</p><br>
+            <p class="has-line-data" data-line-start="141" data-line-end="142">Aqui, <code>-3:</code>
+                significa “desde el indice -3 (tercer ultimo) hasta el final”.</p><br>
         </li>
         <li class="has-line-data" data-line-start="143" data-line-end="151">
-            <p class="has-line-data" data-line-start="143" data-line-end="144"><strong>Obtener números del
-                    índice 3 al 6:</strong></p>
+            <p class="has-line-data" data-line-start="143" data-line-end="144"><strong>Obtener numeros del
+                    indice 3 al 6:</strong></p>
             <pre><code class="has-line-data" data-line-start="146" data-line-end="148" class="language-python">intermedio = numeros[<span class="hljs-number">3</span>:<span class="hljs-number">7</span>]  <span class="hljs-comment"># [3, 4, 5, 6]</span>
 </code></pre>
-            <p class="has-line-data" data-line-start="149" data-line-end="150">Aquí, <code>3:7</code>
-                significa “desde el índice 3 hasta el índice 7 (sin incluirlo)”.</p>
+            <p class="has-line-data" data-line-start="149" data-line-end="150">Aqui, <code>3:7</code>
+                significa “desde el indice 3 hasta el indice 7 (sin incluirlo)”.</p>
         </li>
     </ul><br>
     <h4 class="code-line" data-line-start=151 data-line-end=152><a id="Slicing_con_Pasos_151"></a>Slicing
@@ -214,18 +218,18 @@
     <ul>
         <li class="has-line-data" data-line-start="155" data-line-end="163">
             <p class="has-line-data" data-line-start="155" data-line-end="156"><strong>Obtener cada segundo
-                    número:</strong></p>
+                    numero:</strong></p>
             <pre><code class="has-line-data" data-line-start="158" data-line-end="160" class="language-python">cada_segundo = numeros[::<span class="hljs-number">2</span>]  <span class="hljs-comment"># [0, 2, 4, 6, 8]</span>
 </code></pre>
-            <p class="has-line-data" data-line-start="161" data-line-end="162">Aquí, <code>::2</code>
-                significa “toma cada segundo número”.</p><br>
+            <p class="has-line-data" data-line-start="161" data-line-end="162">Aqui, <code>::2</code>
+                significa “toma cada segundo numero”.</p><br>
         </li>
         <li class="has-line-data" data-line-start="163" data-line-end="170">
             <p class="has-line-data" data-line-start="163" data-line-end="164"><strong>Obtener la lista al
                     revés:</strong></p>
             <pre><code class="has-line-data" data-line-start="166" data-line-end="168" class="language-python">al_reves = numeros[::-<span class="hljs-number">1</span>]  <span class="hljs-comment"># [9, 8, 7, 6, 5, 4, 3, 2, 1, 0]</span>
 </code></pre>
-            <p class="has-line-data" data-line-start="169" data-line-end="170">Aquí, <code>[::-1]</code>
+            <p class="has-line-data" data-line-start="169" data-line-end="170">Aqui, <code>[::-1]</code>
                 significa “toma todos los elementos, pero al revés”.</p>
         </li>
     </ul>
@@ -234,85 +238,85 @@
     <h3>Control de Flujo</h3><br>
     <h4>Condicionales</h4>
     <p>Estructura <code>if</code>, <code>elif</code>, <code>else</code>: Las declaraciones condicionales permiten
-        ejecutar código basado en ciertas
+        ejecutar codigo basado en ciertas
         condiciones.</p>
     <br>
     <h4>Condicionales Anidadas</h4>
-    <p>Las condiciones pueden anidarse dentro de otras condiciones para evaluar múltiples criterios.</p>
+    <p>Las condiciones pueden anidarse dentro de otras condiciones para evaluar multiples criterios.</p>
     <br>
-    <h4>Uso de Operadores Lógicos en Condicionales</h4>
-    <p>Los operadores and, or, y not se pueden usar para combinar múltiples condiciones en una declaración
+    <h4>Uso de Operadores Logicos en Condicionales</h4>
+    <p>Los operadores and, or, y not se pueden usar para combinar multiples condiciones en una declaracion
         if.</p>
     <br>
     <hr><br>
     <h3>Bucles</h3><br>
     <h4>Ciclo while</h4>
-    <p>Un bucle <code>while</code> repite un bloque de código mientras una condición sea verdadera. Es útil
+    <p>Un bucle <code>while</code> repite un bloque de codigo mientras una condicion sea verdadera. Es util
         cuando no se sabe de antemano cuántas veces se debe repetir el bucle.</p>
     <p>Ejemplo básico de ciclo <code>while</code>:</p>
     <pre><code>contador = 1
 while contador <= 5:
     print(contador)
     contador += 1</code></pre>
-    <p>Este bucle imprimirá los números del 1 al 5. La variable <code>contador</code> se incrementa en 1 en
-        cada iteración.</p>
+    <p>Este bucle imprimirá los numeros del 1 al 5. La variable <code>contador</code> se incrementa en 1 en
+        cada iteracion.</p>
     <br>
-    <h4>Ciclo while con una condición de salida</h4>
-    <p>El bucle <code>while</code> también se puede utilizar con una condición de salida para detenerse
+    <h4>Ciclo while con una condicion de salida</h4>
+    <p>El bucle <code>while</code> también se puede utilizar con una condicion de salida para detenerse
         cuando se alcanza un cierto estado.</p>
-    <p>Ejemplo de ciclo <code>while</code> con una condición de salida:</p>
+    <p>Ejemplo de ciclo <code>while</code> con una condicion de salida:</p>
     <pre><code>respuesta = ""
 while respuesta != "salir":
     respuesta = input("Escribe 'salir' para terminar: ")
     print("Escribiste:", respuesta)</code></pre>
-    <p>Este bucle pedirá al usuario que ingrese un texto hasta que escriba "salir". En cada iteración, se
-        imprime lo que el usuario escribió.</p>
+    <p>Este bucle pedirá al usuario que ingrese un texto hasta que escriba "salir". En cada iteracion, se
+        imprime lo que el usuario escribio.</p>
     <br>
     <h4>Ciclo for</h4>
     <p>Un bucle <code>for</code> se utiliza para iterar sobre una secuencia (como una lista o un rango de
-        números). A diferencia del ciclo <code>while</code>, el número de iteraciones está determinado por
+        numeros). A diferencia del ciclo <code>while</code>, el numero de iteraciones está determinado por
         la cantidad de elementos en la secuencia.</p>
     <p>Ejemplo básico de ciclo <code>for</code>:</p>
     <pre><code>for i in range(5):
     print(i)</code></pre>
-    <p>Este bucle imprimirá los números del 0 al 4.</p>
+    <p>Este bucle imprimirá los numeros del 0 al 4.</p>
     <br>
     <hr><br>
 
     <h3>Funciones</h3><br>
-    <p>Son bloques de código reutilizables que realizan una tarea específica. Se definen
-        usando la palabra clave <code>def</code> seguida del nombre de la función y paréntesis. Dentro de
-        los paréntesis, se pueden incluir parámetros, que son variables que la función puede recibir como
+    <p>Son bloques de codigo reutilizables que realizan una tarea especifica. Se definen
+        usando la palabra clave <code>def</code> seguida del nombre de la funcion y paréntesis. Dentro de
+        los paréntesis, se pueden incluir parámetros, que son variables que la funcion puede recibir como
         entrada.</p>
-    <p>Ejemplo de una función simple:</p>
+    <p>Ejemplo de una funcion simple:</p>
     <pre><code>def saludar(nombre):
     print(f"Hola, {nombre}!")
 
 saludar("Steve")</code></pre>
-    <p>Este código define una función llamada <code>saludar</code> que toma un parámetro <code>nombre</code>
-        e imprime un mensaje de saludo. Luego, la función se llama con el argumento <code>"Steve"</code>, y
+    <p>Este codigo define una funcion llamada <code>saludar</code> que toma un parámetro <code>nombre</code>
+        e imprime un mensaje de saludo. Luego, la funcion se llama con el argumento <code>"Steve"</code>, y
         se imprimirá <code>Hola, Steve!</code>.</p>
     <br>
     <h4>Funciones con valor de retorno</h4>
     <p>Las funciones pueden devolver un valor usando la palabra clave <code>return</code>. Esto permite que
-        la función envíe datos de vuelta al lugar donde fue llamada. Utilizar funciones con valor de retorno
-        es útil cuando necesitas el resultado de un cálculo o una operación para usarlo en otro lugar del
+        la funcion envie datos de vuelta al lugar donde fue llamada. Utilizar funciones con valor de retorno
+        es util cuando necesitas el resultado de un cálculo o una operacion para usarlo en otro lugar del
         programa.</p>
-    <p>Ejemplo de una función con valor de retorno:</p>
+    <p>Ejemplo de una funcion con valor de retorno:</p>
     <pre><code>def suma(a, b):
     return a + b
 
 resultado = suma(3, 5)
 print(resultado)</code></pre>
-    <p>Este código define una función <code>suma</code> que toma dos parámetros, <code>a</code> y
-        <code>b</code>, y devuelve su suma. El resultado de la función se almacena en la variable
+    <p>Este codigo define una funcion <code>suma</code> que toma dos parámetros, <code>a</code> y
+        <code>b</code>, y devuelve su suma. El resultado de la funcion se almacena en la variable
         <code>resultado</code>, que luego se imprime (mostrará <code>8</code>).
     </p>
     <br>
-    <h4>Funciones con múltiples valores de retorno</h4>
-    <p>Las funciones también pueden devolver múltiples valores utilizando tuplas. Esto es útil cuando
-        necesitas devolver más de un valor desde una función.</p>
-    <p>Ejemplo de una función que devuelve múltiples valores:</p>
+    <h4>Funciones con multiples valores de retorno</h4>
+    <p>Las funciones también pueden devolver multiples valores utilizando tuplas. Esto es util cuando
+        necesitas devolver más de un valor desde una funcion.</p>
+    <p>Ejemplo de una funcion que devuelve multiples valores:</p>
     <pre><code>def operaciones(a, b):
     suma = a + b
     resta = a - b
@@ -321,17 +325,17 @@ print(resultado)</code></pre>
 resultado_suma, resultado_resta = operaciones(10, 5)
 print("Suma:", resultado_suma)
 print("Resta:", resultado_resta)</code></pre>
-    <p>Este código define una función <code>operaciones</code> que toma dos parámetros y devuelve la suma y
+    <p>Este codigo define una funcion <code>operaciones</code> que toma dos parámetros y devuelve la suma y
         la resta de esos parámetros. Los resultados se almacenan en dos variables separadas y luego se
         imprimen.</p>
     <br>
     <hr><br><br><br>
-    <p>Si puedes imaginarlo, puedes programarlo. La curiosidad y el aprendizaje constante son tus mejores herramientas para transformar sueños en código</p><br><br><br><br><br><br><br>
+    <p>Si puedes imaginarlo, puedes programarlo. La curiosidad y el aprendizaje constante son tus mejores herramientas para transformar sueños en codigo</p><br><br><br><br><br><br><br>
     <button id="playButton">JUST DO IT</button>
     <br><br><br><br><br><br>
     <div id="videoBackground"></div>
     <footer>
-        <p>©2024 DesvoSoft</p>
+        <p>©2025 DesvoSoft</p>
     </footer>
 </body>
 <script>
@@ -342,9 +346,9 @@ print("Resta:", resultado_resta)</code></pre>
         // URL del video de YouTube con controles y sonido
         const videoUrl = 'https://www.youtube.com/embed/5-sfG8BV8wU?autoplay=1&controls=0&loop=0&amp;vq=hd1080';
 
-        // Función para reproducir el video y mostrar el div
+        // Funcion para reproducir el video y mostrar el div
         playButton.addEventListener('click', function () {
-            // Inyectar el video de YouTube en el fondo si aún no se ha inyectado
+            // Inyectar el video de YouTube en el fondo si aun no se ha inyectado
             if (!videoBackground.innerHTML) {
                 videoBackground.innerHTML = `<iframe width="100%" height="100%" src="${videoUrl}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>`;
             }
