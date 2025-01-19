@@ -32,3 +32,4 @@ Updates
   
 - Jan. 18, 2025:
   A new page with Git content was added, it has basic guidance about it, and more complex scenarios. Also the JS page was updated with a currency converter for ARG, I want to use an API for this, but I am still learning how to obfuscate the code to prevent public API keys. Navbar menu was fixed.
+  
