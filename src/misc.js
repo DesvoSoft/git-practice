@@ -38,19 +38,3 @@ resetBtn.onclick = function(){
     countLabel.textContent = count;
 };
 
-// Dropdown-menu functionality
-document.addEventListener('DOMContentLoaded', function() {
-    const dropdownBtn = document.querySelector('.dropdown-btn');
-    const dropdown = document.querySelector('.dropdown');
-
-    dropdownBtn.addEventListener('click', function() {
-        dropdown.classList.toggle('open');
-    });
-
-    // Cerrar el menu al hacer clic fuera de él
-    document.addEventListener('click', function(event) {
-        if (!dropdown.contains(event.target) && !dropdownBtn.contains(event.target)) {
-            dropdown.classList.remove('open');
-        }
-    });
-});
