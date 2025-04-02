@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fundamentos de Python</title>
     <link rel="stylesheet" href="../css/page-specific/info-pages.css">
-    <script defer src="../script.js"></script>
-    <link rel="icon" href="../theme.ico">
+    <link rel="icon" href="../images/theme.ico">
 </head>
 
 <body>
@@ -17,6 +16,7 @@
             <nav>
                 <ul class="links">
                     <li><a href="../../index.html" class="navbutton">Homepage</a></li>
+                    <li><a href="raptor.html" class="navbutton">Raptor</a></li>
                     <li><a href="javascript.html" class="navbutton">Javascript</a></li>
                     <li><a href="git.html" class="navbutton">Git</a></li>
                 </ul>
@@ -28,6 +28,7 @@
         <div class="dropdown">
             <ul>
                 <li><a href="../../index.html" class="navbutton">Homepage</a></li>
+                <li><a href="raptor.html" class="navbutton">Raptor</a></li>
                 <li><a href="javascript.html" class="navbutton">Javascript</a></li>
                 <li><a href="git.html" class="navbutton">Git</a></li>
             </ul>
@@ -337,43 +338,27 @@ print("Resta:", resultado_resta)</code></pre>
     <footer>
         <p>©2025 DesvoSoft</p>
     </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const playButton = document.getElementById('playButton');
+            const videoBackground = document.getElementById('videoBackground');
+
+            // URL del video de YouTube con controles y sonido
+            const videoUrl = 'https://www.youtube.com/embed/5-sfG8BV8wU?autoplay=1&controls=0&loop=0&amp;vq=hd1080';
+
+            // Funcion para reproducir el video y mostrar el div
+            playButton.addEventListener('click', function () {
+                // Inyectar el video de YouTube en el fondo si aun no se ha inyectado
+                if (!videoBackground.innerHTML) {
+                    videoBackground.innerHTML = `<iframe width="100%" height="100%" src="${videoUrl}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>`;
+                }
+
+                // Mostrar el div de videoBackground
+                videoBackground.style.display = 'block';
+            });
+        });
+    </script>
+
+    <script src="../JS/navbar.js"></script>
 </body>
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const playButton = document.getElementById('playButton');
-        const videoBackground = document.getElementById('videoBackground');
-
-        // URL del video de YouTube con controles y sonido
-        const videoUrl = 'https://www.youtube.com/embed/5-sfG8BV8wU?autoplay=1&controls=0&loop=0&amp;vq=hd1080';
-
-        // Funcion para reproducir el video y mostrar el div
-        playButton.addEventListener('click', function () {
-            // Inyectar el video de YouTube en el fondo si aun no se ha inyectado
-            if (!videoBackground.innerHTML) {
-                videoBackground.innerHTML = `<iframe width="100%" height="100%" src="${videoUrl}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>`;
-            }
-
-            // Mostrar el div de videoBackground
-            videoBackground.style.display = 'block';
-        });
-    });
-
-    document.addEventListener('DOMContentLoaded', function() {
-        const dropdownBtn = document.querySelector('.dropdown-btn');
-        const dropdown = document.querySelector('.dropdown');
-
-        dropdownBtn.addEventListener('click', function() {
-            dropdown.classList.toggle('open');
-        });
-
-        // Cerrar el menu al hacer clic fuera de él
-        document.addEventListener('click', function(event) {
-            if (!dropdown.contains(event.target) && !dropdownBtn.contains(event.target)) {
-                dropdown.classList.remove('open');
-            }
-        });
-    });
-
-</script>
-
 </html>

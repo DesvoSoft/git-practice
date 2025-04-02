@@ -3,10 +3,11 @@
 <html>
 <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="DesvoSoft: Aprende Git, Python y más en este sitio de desarrollo web.">
 <link rel="stylesheet" href="./src/css/styles.css">
 <link rel="stylesheet" href="./src/css/swiper.css">
-<script defer src="./src/homescript.js"></script>
-<link rel="icon" href="./src/theme.ico">
+<script defer src="./src/JS/homescript.js"></script>
+<link rel="icon" href="./src/images/theme.ico">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 <title>DesvoSoft</title>
@@ -15,13 +16,15 @@
 
 <body>
     <header>
+        <!-- Navbar -->
         <div class="navbar">
             <div class="logo"><a href="#">Hello world</a></div>
             <nav>
                 <ul class="links">
                     <li><a href="./src/pages/python.html" class="navbutton">Python</a></li>
-                    <li><a href="./src/pages/javascript.html" class="navbutton">Javascript</a></li>
+                    <!--<li><a href="./src/pages/javascript.html" class="navbutton">Javascript</a></li>  --- WIP -->
                     <li><a href="./src/pages/git.html" class="navbutton">Git</a></li>
+                    <li><a href="./src/pages/raptor.html" class="navbutton">Raptor</a></li>
                     <li><a href="#images" class="navbutton">Images</a></li>
                     <li><a href="#contact" class="navbutton">Contact</a></li>
                 </ul>
@@ -30,11 +33,13 @@
                 <a href="#">&#9776;</a>
             </div>
         </div>
+
         <div class="dropdown">
             <ul>
                 <li><a href="./src/pages/python.html" class="navbutton">Python</a></li>
-                <li><a href="./src/pages/javascript.html" class="navbutton">Javascript</a></li>
+                <!--<li><a href="./src/pages/javascript.html" class="navbutton">Javascript</a></li>  --- WIP -->
                 <li><a href="./src/pages/git.html" class="navbutton">Git</a></li>
+                <li><a href="./src/pages/raptor.html" class="navbutton">Raptor</a></li>
                 <li><a href="#images" class="navbutton">Images</a></li>
                 <li><a href="#contact" class="navbutton">Contact</a></li>
             </ul>
@@ -43,34 +48,30 @@
     </header>
 
     <section id="home" class="hidden">
-        <h2>Homepage</h2><br>
-        <p>Welcome to my website.</p>
-        <br>
-        <p>This website is designed to practice version control with Git, SEO, and other web development topics. It will
-            be updated with content generated using Stable Diffusion, an AI image generation model. The objective is to
-            practice and showcase some outcomes while exploring the intersection of web development.</p>
+        <h2 data-i18n="seccionHomeTitulo">Homepage</h2><br>
+        <p data-i18n="seccionHomeTexto" style="max-width: 60%; margin: auto;">Welcome to Hello World a website created with the intent of sharing helpful information about programming basics while I learn and practice as well.<br><br>
+        This website was originated from the idea to practice version control with Git and GitHub, and webdev.<br>Over time the idea is to add information about programming and digital topics (nothing in particular but mainly consice and helpful).
         </p>
     </section>
 
     <section id="about" class="hidden">
-        <h2>About</h2><br>
-        <p>Learning</p><br>
-        <br>
-        <p>Key areas of focus: <br><br>
-            - Version Control: Utilizing Git to manage and track changes in the website<br>
-            - SEO: Implementing best practices to improve search engine visibility and performance<br>
-            - Responsive Design: Ensuring a seamless experience across various devices and screen sizes<br>
+        <h2 data-i18n="seccionAcercaTitulo">About</h2><br>
+        <p data-i18n="seccionAcercaTexto">Learning<br><br>
+        Current available content:<br><br>
+            - Python fundamentals<br>
+            - Git basics<br>
+            <!-- WebDev initiation<br>-->
         <br><br>
-        <p>Feel free to explore the site and reach out if you have any questions or suggestion ^^</p>
+        Feel free to explore the site and reach out if you have any suggestion ^^</p>
         <br>
         <p>DESVO</p>
         <br>
     </section>
 
     <section id="images" class="hidden">
-        <h2>Images</h2>
+        <h2 data-i18n="seccionImagenesTitulo">Images</h2>
         <br>
-        <p>Images generated with Stable Diffussion 1.5</p>
+        <p data-i18n="seccionImagenesTexto">Old images generated with Stable Diffussion 1.5 when the trend started</p>
         <br><br><br>
         <div class="swiper mySwiper">
             <div class="swiper-wrapper">
@@ -115,25 +116,9 @@
                     <img src="./src/images/10.png">
                 </div>
 
-                <div class="swiper-slide">
+                <!--<div class="swiper-slide">
                     <img src="./src/images/11.png">
-                </div>
-
-                <div class="swiper-slide">
-                    <img src="./src/images/12.png">
-                </div>
-
-                <div class="swiper-slide">
-                    <img src="./src/images/13.png">
-                </div>
-
-                <div class="swiper-slide">
-                    <img src="./src/images/14.png">
-                </div>
-
-                <div class="swiper-slide">
-                    <img src="./src/images/15.png">
-                </div>
+                </div>-->
 
             </div>
             <div class="swiper-pagination"></div>
@@ -141,17 +126,17 @@
     </section>
 
     <section id="contact" class="hidden">
-        <h2>Contact</h2>
+        <h2 data-i18n="seccionContactoTitulo">Contact</h2>
         <br>
         <!--<p>Contact me through the following means:</p><br>-->
         <p>Email: <a href="mailto:desvox23@gmail.com">desvox23@gmail.com</a></p>
         <br>
-        <p><a href="https://discord.gg/v5hyKDyfVT">Discord Server</a></p>
+        <button class="discBtn" style="padding: 10px; border-radius: 25%; background-color: #002d68;"><a href="https://discord.gg/v5hyKDyfVT">Discord Server</a></button>
     </section><br>
 
-    <script src="./src/navbar.js"></script>
-
     <footer>
-        <p>&copy; 2025 DesvoSoft</p>
+        <p data-i18n="footerCopyright">&copy; 2025 DesvoSoft</p>
     </footer>
+
+    <script src="./src/JS/navbar.js"></script>
 </body>
