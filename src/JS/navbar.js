@@ -1,3 +1,5 @@
+// ============ Navbar Script ============
+
 const dropdownBtn = document.querySelector('.dropdown-btn');
 const dropdown = document.querySelector('.dropdown');
 
@@ -7,7 +9,7 @@ dropdownBtn.addEventListener('click', () => {
 });
 
 // Cerrar el menu si se hace clic fuera
-document.addEventListener('click', (event) => {
+document.addEventListener('click', event => {
     if (!dropdown.contains(event.target) && !dropdownBtn.contains(event.target)) {
         dropdown.classList.remove('open');
     }

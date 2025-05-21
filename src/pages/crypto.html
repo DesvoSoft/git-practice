@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía de Criptomonedas</title>
+    <link rel="stylesheet" href="../css/page-specific/info-pages.css">
+    <link rel="icon" href="../images/theme.ico">
+</head>
+<style>
+    .popup-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente */
+        display: none; /* Oculto por defecto */
+        justify-content: center;
+        align-items: center;
+        z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    }
+
+    .popup-content {
+        background-color: hsl(0, 0%, 61%);
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        width: 90%;
+        max-width: 500px; /* Ancho máximo del pop-up */
+        text-align: left;
+        position: relative; /* Para posicionar el botón de cierre */
+        animation: fadeIn 0.3s ease-out;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: scale(0.9);
+        }
+        to {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+
+    .popup-content h2 {
+        margin-top: 0;
+        color: #333;
+        font-size: 1.5em;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+    }
+
+    .popup-content p {
+        font-size: 0.95em;
+        line-height: 1.6;
+        color: #555;
+        margin-bottom: 20px;
+    }
+
+    .popup-close-btn {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        background: none;
+        border: none;
+        font-size: 1.8em;
+        cursor: pointer;
+        color: #888;
+        line-height: 1;
+    }
+
+    .popup-close-btn:hover {
+        color: #333;
+    }
+
+    .popup-actions {
+        text-align: right;
+    }
+
+    .popup-accept-btn {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1em;
+        transition: background-color 0.3s ease;
+    }
+
+    .popup-accept-btn:hover {
+        background-color: #0056b3;
+    }
+
+    /* Estilo para el botón que activa el pop-up (opcional) */
+    .show-popup-btn {
+        padding: 10px 20px;
+        font-size: 1em;
+        cursor: pointer;
+        background-color: #28a745;
+        color: white;
+        border: none;
+        border-radius: 5px;
+    }
+
+    .disclaimer-btn{
+        color: black;
+    }
+</style>
+
+<body>
+    <header>
+    </header>
+    
+    <div class="navbar">
+        <div class="navbar-inner">
+            <div class="logo">
+                <a href="../../index.html"><span class="code-line-logo"></span>Hello World</a>
+            </div>
+            <nav>
+                <ul class="links">
+                    <li><a href="../../index.html" class="navbutton">Inicio</a></li>
+                    <li><a href="./python.html" class="navbutton">Python</a></li>
+                    <li><a href="./git.html" class="navbutton">Git</a></li>
+                    <li><a href="./raptor.html" class="navbutton">Raptor</a></li>
+                    <!-- <li><a href="./crypto.html" class="navbutton">Crypto</a></li> -->
+                    <li><a href="../../index.html#contact" class="navbutton">Contacto</a></li>
+                </ul>
+            </nav>
+            
+            <!-- Boton hamburguesa -->
+            <button class="dropdown-btn" aria-label="Abrir menú">☰</button>
+
+            <!-- Menu desplegable -->
+            <div class="dropdown">
+                <ul>
+                    <li><a href="../../index.html" class="navbutton">Inicio</a></li>
+                    <li><a href="./python.html" class="navbutton">Python</a></li>
+                    <!--<li><a href="./src/pages/javascript.html" class="navbutton">Javascript</a></li>  --- WIP -->
+                    <li><a href="./git.html" class="navbutton">Git</a></li>
+                    <li><a href="./raptor.html" class="navbutton">Raptor</a></li>
+                    <!-- <li><a href="./crypto.html" class="navbutton">Crypto</a></li> -->
+                    <li><a href="../../index.html#contact" class="navbutton">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    
+    <!-- DISCLAIMER -->
+
+    
+
+    <div class="popup-overlay" id="disclaimerPopup">
+        <div class="popup-content">
+            <button class="popup-close-btn" onclick="ocultarPopup()">&times;</button>
+            <h2>Aviso Importante</h2>
+            <p>
+                La información proporcionada en este sitio es únicamente con fines educativos e informativos. No debe considerarse como asesoramiento financiero, de inversión o de otro tipo. Las inversiones en criptomonedas pueden ser volátiles y conllevan riesgos. Te recomiendo encarecidamente que realices tu propia investigación y consultes a un profesional financiero antes de tomar decisiones de inversión.
+            </p>
+            <p>
+                La información proporcionada en este sitio web es solo para fines informativos generales. Recuerda que cada persona tiene una situación financiera única, y lo que funciona para uno puede no ser adecuado para otro. La responsabilidad de tus decisiones de inversión es exclusivamente tuya.
+            </p>
+            <div class="popup-actions">
+                <button class="popup-accept-btn" onclick="aceptarDisclaimer()">Aceptar y Cerrar</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const disclaimerPopup = document.getElementById('disclaimerPopup');
+
+        // Función para mostrar el pop-up
+        function mostrarPopup() {
+            if (disclaimerPopup) {
+                disclaimerPopup.style.display = 'flex';
+            }
+        }
+
+        // Función para ocultar el pop-up
+        function ocultarPopup() {
+            if (disclaimerPopup) {
+                disclaimerPopup.style.display = 'none';
+            }
+        }
+
+        // Función para cuando el usuario acepta el disclaimer
+        function aceptarDisclaimer() {
+            ocultarPopup();
+            console.log('Disclaimer aceptado.');
+            localStorage.setItem('disclaimerAceptado', 'true');
+        }
+
+        // --- Lógica para mostrar el pop-up automáticamente ---
+
+        // Opción 1: Mostrar al cargar la página
+        window.onload = function() {
+            // Comprobar si el disclaimer ya fue aceptado (usando localStorage como ejemplo)
+            if (!localStorage.getItem('disclaimerAceptado')) {
+                mostrarPopup();
+            }
+            // Por ahora, lo mostramos directamente para la demostración
+            //  mostrarPopup(); 
+        };
+
+        // Event listener para cerrar con la tecla Escape
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape' && disclaimerPopup.style.display === 'flex') {
+                ocultarPopup();
+            }
+        });
+
+        // Event listener para cerrar si se hace clic fuera del contenido del pop-up
+        disclaimerPopup.addEventListener('click', function(event) {
+            if (event.target === disclaimerPopup) { // Si el clic es en el overlay mismo
+                ocultarPopup();
+            }
+        });
+
+    </script>
+
+    <!-- FIN DISCLAIMER -->
+
+    <br>
+    <main>
+        <section id="intro">
+            <h1>Bitcoin</h1>
+            <p>Bitcoin es un activo escaso (oferta máxima de 21 millones) y descentralizado, considerado "oro digital". Eventos como los halvings, donde se reduce la recompensa por bloque, refuerzan esta escasez y suelen preceder subidas de precio.</p>
+            <p>Por ejemplo, quien invirtió $1,000 en BTC a comienzos de 2015 tendría ~$350,000 en 2024. Aunque el rendimiento pasado no garantiza resultados futuros, demuestra el potencial a largo plazo.</p>
+            
+            <div class="disclaimer-btn">
+                <button class="show-popup-btn" onclick="mostrarPopup()">Disclaimer</button><hr><br>
+            </div>
+
+        </section>
+
+        <!-- Tipos de inversion en Bitcoin -->
+        <section id="investment-types">
+            <h2>Tipos de inversión</h2>
+            <ul>
+                <li><strong>HODLing estratégico (largo plazo):</strong> Comprar y mantener BTC durante años. Es simple y tiene potencial de grandes ganancias, pero requiere disciplina y seguridad.</li>
+                <br>
+                <li><strong>Trading activo:</strong>
+                    <ul>
+                        <li><strong>Scalping:</strong> Operaciones rápidas (minutos/horas). Requiere plataformas avanzadas y tiene alta exposición a errores.</li>
+                        <li><strong>Swing trading:</strong> Basado en análisis técnico de días/semanas. Permite aprovechar tendencias, pero conlleva riesgos elevados.</li>
+                    </ul>
+                </li>
+                <br>
+                <li><strong>Ingresos pasivos (yield):</strong> Prestar BTC para ganar intereses (~3–10% anual). Riesgo: quiebra de la plataforma.</li>
+                <br>
+                <li><strong>Cobertura con derivados:</strong> Uso de futuros u opciones para proteger tenencias ante caídas.</li>
+            </ul>
+            <br><hr><br>
+        </section>
+
+        <!-- Gestión de riesgos -->
+        <section id="risk-management">
+            <h2>Gestión de riesgos</h2>
+            <p>Proteger tu capital es fundamental antes de buscar ganancias. Una gestión de riesgos adecuada puede marcar la diferencia entre un inversor exitoso y uno que sufre pérdidas significativas. Aquí te detallo algunas estrategias y conceptos clave:</p>
+            <br>
+            <ul>
+                <li><strong>Tamaño de posición prudente:</strong> Arriesga solo 1–2% del portafolio por operación.
+                    <p>Esta regla ayuda a evitar que una sola operación perdedora tenga un impacto devastador en tu capital total. Por ejemplo, si tienes un portafolio de $10,000, no deberías arriesgar más de $100-$200 en una sola operación.</p>
+                </li>
+                <br>
+                <li><strong>Órdenes de stop-loss y take-profit:</strong> Automatiza salidas para limitar pérdidas y asegurar ganancias.
+                    <ul><br>
+                        <li><strong>Stop-Loss:</strong> Una orden para vender un activo cuando alcanza un precio específico, limitando la pérdida potencial.
+                            <p>Imagina que compras BTC a $50,000. Estableces un stop-loss en $45,000. Si el precio cae a $45,000, tu posición se vende automáticamente, limitando tu pérdida a $5,000.</p>
+                        </li>
+                        <br>
+                        <li><strong>Take-Profit:</strong> Una orden para vender un activo cuando alcanza un precio específico, asegurando una ganancia.
+                            <p>Siguiendo el ejemplo anterior, podrías establecer un take-profit en $60,000. Si el precio sube a $60,000, tu posición se vende automáticamente, asegurando una ganancia de $10,000.</p>
+                        </li>
+                        <br>
+                    </ul>
+                </li>
+                <br>
+                <li><strong>Leverage moderado:</strong> Si usas apalancamiento, mantén colateral suficiente y stops estrictos.
+                    <ul><br>
+                        <li><strong>Apalancamiento:</strong> El uso de capital prestado para aumentar el potencial de retorno de una inversión.
+                            <p>Un apalancamiento de 2x significa que con $1,000 de tu capital, puedes controlar $2,000 en BTC. Si el precio de BTC sube un 10%, tu ganancia sería del 20% ($200), pero si baja un 10%, tu pérdida también sería del 20% ($200).</p>
+                        </li>
+                        <br>
+                        <li><strong>Colateral:</strong> Activos ofrecidos como garantía para asegurar un préstamo.
+                            <p>Al usar apalancamiento, el exchange requiere que mantengas un cierto nivel de colateral en tu cuenta. Si el precio se mueve en tu contra, tu colateral puede liquidarse para cubrir las pérdidas.</p>
+                        </li>
+                        <br>
+                    </ul>
+                </li>
+                <br>
+                <li><strong>Diversificación:</strong> Incluye activos no correlacionados para reducir riesgos.
+                    <ul><br>
+                        <li><strong>Activos no correlacionados:</strong> Activos que no se mueven en la misma dirección al mismo tiempo.
+                            <p>Por ejemplo, las acciones y los bonos a menudo tienen una correlación baja o negativa. Cuando las acciones bajan, los bonos pueden subir, y viceversa. Incluir ambos en tu portafolio reduce el riesgo general.</p>
+                        </li>
+                        <br>
+                        <li><strong>Ejemplos:</strong> Acciones, bonos, criptomonedas, materias primas, bienes raíces.</li>
+                        <br>
+                    </ul>
+                </li>
+                <li><strong>Seguridad operativa:</strong> Usa 2FA y wallets confiables; para grandes montos, custodia en frío.
+                    <ul><br>
+                        <li><strong>2FA (Autenticación de dos factores):</strong> Proceso de seguridad que requiere dos formas de identificación.
+                            <p>Además de tu contraseña, el 2FA puede requerir un código enviado a tu teléfono o generado por una aplicación como Google Authenticator, añadiendo una capa extra de seguridad.</p>
+                        </li>
+                        <br>
+                        <li><strong>Wallets:</strong> Dispositivos o aplicaciones para almacenar criptomonedas.
+                            <p>Es crucial elegir una wallet segura y confiable. Algunas opciones populares incluyen Ledger (hardware wallet), Trezor (hardware wallet) y Electrum (software wallet).</p>
+                        </li>
+                        <br>
+                        <li><strong>Custodia en frío:</strong> Almacenar criptomonedas fuera de línea para mayor seguridad.
+                            <p>Esto implica guardar tus claves privadas en un dispositivo que no está conectado a Internet, como un hardware wallet o una cartera de papel, protegiéndolas de hackeos.</p>
+                        </li>
+                        <br>
+                    </ul>
+                </li>
+            </ul>
+            <br>
+            <hr>
+            <br>
+        </section>
+
+        <!-- Análisis técnico -->
+        <section id="technical-analysis">
+            <h2>Análisis técnico</h2>
+            <ul>
+                <li><strong>Patrones de velas japonesas:</strong> Formaciones como "hammer" o "doji" indican reversiones. Confirma con volumen.</li>
+                <br>
+                <li><strong>Indicadores técnicos:</strong> Herramientas como RSI y MACD ayudan a identificar sobrecompra, sobreventa y tendencias.</li>
+                <br>
+                <li><strong>Niveles de soporte y resistencia:</strong> Zonas donde el precio históricamente se detuvo. Usa Fibonacci para retrocesos.</li>
+            </ul>
+            <br>
+            <p><strong>Consejo:</strong> Combina varias herramientas para validar señales y gestiona siempre el riesgo.</p>
+            <br><hr><br>
+        </section>
+
+        <!-- Análisis fundamental -->
+        <section id="fundamental-analysis">
+            <h2>Análisis fundamental</h2>
+            <ul>
+                <li><strong>Métricas on-chain:</strong> Datos como el Puell Multiple o SOPR muestran la salud de la red y ciclos de mercado.</li>
+                <br>
+                <li><strong>Eventos macro:</strong> Políticas monetarias, inflación y regulación influyen en el precio de Bitcoin.</li>
+                <br>
+                <li><strong>Minería:</strong> Cambios en dificultad y hashrate reflejan la estabilidad de la red.</li>
+            </ul>
+            <br><hr><br>
+        </section>
+
+        <!-- Futuros y derivados -->
+        <section id="derivatives">
+            <h2>Futuros y derivados</h2>
+            <ul>
+                <li><strong>Futuros perpetuos:</strong> Contratos sin vencimiento con settlement diario. Alta flexibilidad, pero alto riesgo.</li>
+                <br>
+                <li><strong>Opciones:</strong> Contratos call/put para especular o proteger. Estrategias comunes: straddle, iron condor.</li>
+            </ul>
+            <br>
+            <p><strong>Nota:</strong> Los derivados amplifican tanto ganancias como pérdidas. Requieren estrategias disciplinadas.</p>
+            <br><hr><br>
+        </section>
+
+        <!-- Estrategias avanzadas -->
+        <section id="advanced-strategies">
+            <h2>Estrategias avanzadas</h2>
+            <br>
+            <ul>
+                <li><strong>Comprar en capitulación:</strong> Usar indicadores como Hash Ribbons para identificar oportunidades en pánico.</li>
+                <li><strong>Arbitraje entre exchanges:</strong> Aprovechar diferencias de precios en mercados.</li>
+                <li><strong>Seguimiento de rupturas:</strong> Detectar rompimientos de resistencias con alto volumen para entrar en tendencia.</li>
+            </ul>
+            <br><hr><br>
+        </section>
+
+        <!-- Recursos adicionales -->
+        <section id="resources">
+            <h2>Recursos adicionales</h2>
+            <br>
+            <ul>
+                <li><strong>Documentación:</strong> <a href="https://www.investopedia.com/bitcoin-halving-4843769" target="_blank">Bitcoin Halving (Investopedia)</a></li>
+                <li><strong>Guías:</strong> <a href="https://coinbureau.com/guides/risk-management-strategies-crypto-trading/" target="_blank">Estrategias de gestión de riesgos (Coin Bureau)</a></li>
+                <li><strong>Reportes:</strong> <a href="https://bitcoinmagazine.com/markets/exploring-six-on-chain-indicators-to-understand-the-bitcoin-market-cycle" target="_blank">Indicadores on-chain (Bitcoin Magazine)</a></li>
+            </ul>
+            <br>
+            <p>Consulta estas fuentes para mejorar tu conocimiento y estrategias.</p>
+            <br><hr><br>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>©2025 DesvoSoft</p>
+    </footer>
+
+    <script src="../JS/navbar.js"></script>
+</body>
+
+</html>

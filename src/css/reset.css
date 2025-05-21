@@ -1,5 +1,0 @@
-/* Reinicia los estilos por defecto para evitar inconsistencias entre navegadores */
-body, h1, h2, p, ul {
-    margin: 0;
-    padding: 0;
-}
