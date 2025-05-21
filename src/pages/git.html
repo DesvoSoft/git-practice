@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -11,44 +11,50 @@
 
 <body>
     <header>
-        <div class="navbar">
-            <div class="logo"><a href="../../index.html">Hello world</a></div>
-            <nav>
-                <ul class="links">
-                    <li><a href="../../index.html" class="navbutton">Homepage</a></li>
-                    <li><a href="python.html" class="navbutton">Python</a></li>
-                    <li><a href="raptor.html" class="navbutton">Raptor</a></li>
-                    <li><a href="javascript.html" class="navbutton">Javascript</a></li>
-                    <li><a href="crypto.html" class="navbutton active">Crypto</a></li>
-                </ul>
-            </nav>
-            <div class="dropdown-btn">
-                <a href="#">&#9776;</a>
-            </div>
-        </div>
-        <div class="dropdown">
-            <ul>
-                <li><a href="../../index.html" class="navbutton">Homepage</a></li>
-                <li><a href="python.html" class="navbutton">Python</a></li>
-                <li><a href="raptor.html" class="navbutton">Raptor</a></li>
-                <li><a href="javascript.html" class="navbutton">Javascript</a></li>
-                <li><a href="crypto.html" class="navbutton active">Crypto</a></li>
-            </ul>
-        </div>
-
-        <h1>Guía de Git</h1>
-        <p>Domina Git para colaborar y mantener tu historial de código claro.</p>
+        
     </header>
 
+    <div class="navbar">
+        <div class="navbar-inner">
+            <div class="logo">
+                <a href="../../index.html"><span class="code-line-logo"></span>Hello World</a>
+            </div>
+            <nav>
+                <ul class="links">
+                    <li><a href="../../index.html" class="navbutton">Inicio</a></li>
+                    <!--<li><a href="./src/pages/javascript.html" class="navbutton">Javascript</a></li>  --- WIP -->
+                    <li><a href="./python.html" class="navbutton">Python</a></li>
+                    <li><a href="./raptor.html" class="navbutton">Raptor</a></li>
+                    <li><a href="./crypto.html" class="navbutton">Crypto</a></li>
+                    <li><a href="../../index.html#contact" class="navbutton">Contacto</a></li>
+                </ul>
+            </nav>
+            
+            <!-- Boton hamburguesa -->
+            <button class="dropdown-btn" aria-label="Abrir menú">☰</button>
+
+            <!-- Menu desplegable -->
+            <div class="dropdown">
+                <ul>
+                    <li><a href="../../index.html" class="navbutton">Inicio</a></li>
+                    <!--<li><a href="./src/pages/javascript.html" class="navbutton">Javascript</a></li>  --- WIP -->
+                    <li><a href="./python.html" class="navbutton">Python</a></li>
+                    <li><a href="./raptor.html" class="navbutton">Raptor</a></li>
+                    <li><a href="./crypto.html" class="navbutton">Crypto</a></li>
+                    <li><a href="../../index.html#contact" class="navbutton">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
     <main>
+        
         <!-- Introducción y flujo típico -->
-        <br>
+        
         <section id="intro">
             <h2>¿Qué es Git?</h2>
-            <br>
             <p>Git es un sistema de control de versiones (VCS) que rastrea los cambios en tus archivos. Permite a múltiples personas trabajar en un proyecto simultáneamente sin pisarse los pies, y facilita volver a versiones anteriores.</p>
-            <p>
-            <br><hr><br>
+            <br>
             <h3>Flujo de trabajo típico</h3>
             <ol>
                 <li>Crear o clonar un repositorio (<code>git init</code> / <code>git clone</code>).</li>
@@ -65,7 +71,6 @@
         <!-- Glosario ordenado -->
         <section id="glossary">
             <h2>Glosario</h2>
-            <br>
             <ul>
                 <li><strong>Repositorio:</strong> Directorio con tu proyecto y su historial.</li>
                 <li><strong>Commit:</strong> Fotografía de los cambios en un punto del tiempo.</li>
@@ -261,8 +266,6 @@ $ git bisect good <SHA_del_commit_anterior>
                 <li><strong>Guías:</strong> <a href="https://guides.github.com/" target="_blank">GitHub Guides</a>, <a href="https://www.atlassian.com/git" target="_blank">Atlassian Git</a></li>
                 <li><strong>Hojas de Referencia:</strong> <a href="https://www.freecodecamp.org/news/git-cheat-sheet/" target="_blank">FreeCodeCamp Cheat Sheet</a></li>
             </ul>
-            <br>
-            <br>
             <br><hr><br>
         </section>
 

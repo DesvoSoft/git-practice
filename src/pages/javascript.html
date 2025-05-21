@@ -4,63 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/page-specific/info-pages.css">
     <link rel="stylesheet" href="../css/page-specific/styleJS.css">
     <link rel="icon" href="../images/theme.ico">
     <title>Javascript</title>
 </head>
 <body>
     <header>
-        <div class="navbar">
-            <div class="logo"><a href="../../index.html">Hello world</a></div>
+
+    </header>
+
+    <div class="navbar">
+        <div class="navbar-inner">
+            <div class="logo">
+                <a href="../../index.html"><span class="code-line-logo"></span>Hello World</a>
+            </div>
             <nav>
                 <ul class="links">
-                    <li><a href="../../index.html" class="navbutton">Homepage</a></li>
-                    <li><a href="python.html" class="navbutton">Python</a></li>
-                    <li><a href="raptor.html" class="navbutton">Raptor</a></li>
-                    <li><a href="git.html" class="navbutton">Git</a></li>
+                    <li><a href="../../index.html" class="navbutton">Inicio</a></li>
+                    <li><a href="./Python.html" class="navbutton">Python</a></li>
+                    <li><a href="./git.html" class="navbutton">Git</a></li>
+                    <li><a href="./raptor.html" class="navbutton">Raptor</a></li>
+                    <li><a href="./crypto.html" class="navbutton">Crypto</a></li>
+                    <li><a href="../../index.html#contact" class="navbutton">Contacto</a></li>
                 </ul>
             </nav>
-            <div class="dropdown-btn" id="dropdownBtn">
-                <a href="#">&#9776;</a>
-            </div>
+            
+            <!-- Boton hamburguesa -->
+            <button class="dropdown-btn" aria-label="Abrir menú">☰</button>
+
+            <!-- Menu desplegable -->
             <div class="dropdown">
                 <ul>
-                    <li><a href="../../index.html" class="navbutton">Homepage</a></li>
-                    <li><a href="python.html" class="navbutton">Python</a></li>
-                    <li><a href="raptor.html" class="navbutton">Raptor</a></li>
-                    <li><a href="git.html" class="navbutton">Git</a></li>
+                    <li><a href="../../index.html" class="navbutton">Inicio</a></li>
+                    <li><a href="./Python.html" class="navbutton">Python</a></li>
+                    <li><a href="./git.html" class="navbutton">Git</a></li>
+                    <li><a href="./raptor.html" class="navbutton">Raptor</a></li>
+                    <li><a href="./crypto.html" class="navbutton">Crypto</a></li>
+                    <li><a href="../../index.html#contact" class="navbutton">Contacto</a></li>
                 </ul>
             </div>
         </div>
+    </div>
 
-    </header>
     <main>
         <section id="home" style="display:block;">
-            <h2 id="myH2">Work in Progress</h2><br>
-            <p>Page about JS</p>
-            </p>
-        </section>
-        <section id="home" style="display: none;">
-            <h2 id="myH2">My Javascript</h2><br>
-            <p>Page about my JS public code</p>
-            </p>
+            <h2 id="myH2">Trabajo en progreso</h2><br>
         </section>
 
         <section style="display: none;">
-            <h1 id="myH1">Welcome</h1>
+            <h1 id="myH1">Hola</h1>
             <p id="myP"></p><br><br>
-            <label>username: </label>
+            <label>usuario: </label>
             <input id="myText"><br><br>
-            <button id="submitBtn">Click me</button>
+            <button id="submitBtn">Clickeame</button>
         </section>
         <hr>
         <section>
             <label id="countLabel"></label>
             <div id="btnContainer">
-                <button id="decreaseBtn" class="buttons">Decrease</button>
-                <button id="resetBtn" class="buttons">Reset</button>
-                <button id="increaseBtn" class="buttons">Increase</button>
+                <button id="decreaseBtn" class="buttons">Reducir</button>
+                <button id="resetBtn" class="buttons">Resetear</button>
+                <button id="increaseBtn" class="buttons">Aumentar</button>
             </div>
         </section>
         <hr>

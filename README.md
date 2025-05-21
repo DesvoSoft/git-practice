@@ -1,37 +1,32 @@
-# Hello world
+# Hello World (DesvoSoft)
 
-A website project to practice git, learn about technologies, and share general content.
-I will try to follow good practices and add content once in a while, any advise will be much appreciated.
+![Logo del proyecto](./src/images/theme.ico) ## Descripción
 
-It has information about Python fundamentals, so it can be useful for an introduction to the language.
+Hello World es un sitio web dedicado a proporcionar recursos y guías de distintos temas relevantes a la evolución digital.  
 
-Link: <https://desvosoft.github.io/git-practice/>
+Nacido como un proyecto personal para practicar el control de versiones con Git y explorar el desarrollo web, este sitio busca ofrecer contenido conciso y práctico, especialmente útil para principiantes y aquellos que desean solidificar sus conocimientos básicos.
 
-Updates
+El contenido de este sitio web está destinado a fines informativos y no debe interpretarse como asesoramiento. Usted acepta usar el sitio web bajo su propio riesgo.
 
-- Oct. 10, 2023:
-  Feeling inspired to code. The site was started, nothing especial tho.
+## Temas
 
-- Oct. 12, 2023:
-  Content from SD outcomes was added, Swipper JS was implemented. and transition effects were added to the sections with an intersection observer.
+Actualmente, el sitio cubre los siguientes temas:
 
-- Oct. 14, 2023:
-  The navigation bar was highly improved, with a minimalist responsive design.
+* **Python:** Recursos y guías sobre el lenguaje de programación Python, incluyendo operadores, tipos de datos y estructuras de datos como listas. [Enlace a la página de Python](./src/pages/python.html)
+* **Git:** Información esencial sobre el sistema de control de versiones Git, desde la configuración inicial hasta comandos básicos y operaciones avanzadas. [Enlace a la página de Git](./src/pages/git.html)
+* **Raptor:** Una herramienta de práctica de mecanografía. [Enlace a la página de Raptor](./src/pages/raptor.html)
+* **Crypto:** Exploración de temas relacionados con las criptomonedas, con un enfoque inicial en Bitcoin. [Enlace a la página de Crypto](./src/pages/crypto.html)
 
-- Jul. 07, 2024:
-  Big update: an entire new page was added with basic information about the fundamentals with Pythons, this HTML works with a separate CSS file (./src/style2.css) to make small differents but withtout affecting the original style of the index homepage. The content added is in Spanish, but looking forward to add it in English as well.
+## Características
 
-- Jul. 08, 2024:
-  Improved the styles, and the navbar is a WIP. Added more information to the content of fundamentals.
+* **Navegación Intuitiva:** Fácil acceso a los diferentes temas a través de una barra de navegación y un menú desplegable para dispositivos móviles.
+* **Diseño Centrado en el Contenido:** Las secciones están diseñadas para presentar la información de manera clara y directa.
+* **Responsive Design:** El sitio se adapta a diferentes tamaños de pantalla para una experiencia de usuario óptima.
+* **Información de Contacto:** Formas sencillas de contactar al creador para preguntas, sugerencias o colaboración.
+* **Enlace al Repositorio:** Acceso directo al código fuente del proyecto en GitHub.
 
-- Dec. 06, 2024:
-  A new page was added to add JS content.
-  The file organization was drastically updated.
-  CSS is now modular, and it has files for specific page needs.
-  Not a very visual change, but this will help maintaining, debuggin, extend and adapt the project.
-  
-- Jan. 18, 2025:
-  A new page with Git content was added, it has basic guidance about it, and more complex scenarios. Also the JS page was updated with a currency converter for ARG, I want to use an API for this, but I am still learning how to obfuscate the code to prevent public API keys. Navbar menu was fixed.
-  
-- Apr. 2, 2025:
-  "Raptor" page added. This is a small website to practice typing skill, inspired on other existing websites, nothing special just my own version.
+* **Navegación Intuitiva:** Fácil acceso a las secciones a través de una barra de navegación y un menú desplegable para dispositivos móviles.
+* **Diseño Centrado en el Contenido:** Presentación clara y directa de la información.
+* **Diseño Adaptativo (Responsive):** El sitio está diseñado para funcionar en diferentes tamaños de pantalla.
+* **Ejemplos Prácticos:** Se incluyen ejemplos de código y casos de uso para facilitar la comprensión.
+* **Enlaces a Recursos Externos:** Se proporcionan enlaces a documentación y guías relevantes para ampliar el conocimiento.
