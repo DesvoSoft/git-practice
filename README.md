@@ -1,6 +1,7 @@
 # Hello World (DesvoSoft)
 
-![Logo del proyecto](./src/images/theme.ico) ## Descripción
+![Logo del proyecto](./src/images/theme.ico)
+## Descripción
 
 Hello World es un sitio web dedicado a proporcionar recursos y guías de distintos temas relevantes a la evolución digital.  
 
